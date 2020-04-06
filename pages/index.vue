@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    HOME
+    <p>Rivalry in the Dark</p>
   </v-container>
 </template>
 
