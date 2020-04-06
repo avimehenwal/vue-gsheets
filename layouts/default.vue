@@ -79,12 +79,8 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    <!-- Footer -->
+    <img class="VuetifyLogo" alt="Vuetify Logo" src="/wave.svg">
   </v-app>
 </template>
 
@@ -97,14 +93,19 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-home',
           title: 'Welcome',
           to: '/'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'Images',
+          to: '/image'
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'Text Gallery',
+          to: '/textimages'
         }
       ],
       miniVariant: false,
