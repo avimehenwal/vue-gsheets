@@ -106,6 +106,11 @@ export default {
           icon: 'mdi-apps',
           title: 'Text Gallery',
           to: '/textimages'
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'MHA Arcs Timeline',
+          to: '/timeline'
         }
       ],
       miniVariant: false,
