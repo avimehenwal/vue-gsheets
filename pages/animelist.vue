@@ -2,7 +2,7 @@
   <v-container>
     <div v-if="grid">
       <v-row>
-        <v-col v-for="(index) in records" :key="index" cols="12" md="3">
+        <v-col v-for="(index) in records" :key="index" cols="12" md="4">
           <v-card dark outlined :href="info[index]" hover :shaped="shaped">
             <v-img class="align-end" :alt="title[index]" :src="image[index]" />
             <v-card-title> {{ title[index] }} </v-card-title>
@@ -33,6 +33,7 @@
           <!-- <v-app-bar-nav-icon /> -->
           <v-toolbar-title>Animes I have watched during quarentine {{ records }}</v-toolbar-title>
           <v-spacer />
+<<<<<<< HEAD
           <v-text-field
             v-model="search"
             append-icon="mdi-magnify"
@@ -40,6 +41,9 @@
             single-line
             hide-details
           />
+=======
+          <v-btn icon> <v-icon>mdi-magnify</v-icon> </v-btn>
+>>>>>>> 80df60561cf1c9d00b5aecb3f989126ed2db5417
         </v-toolbar>
         <v-list two-line subheader>
           <v-list-item v-for="index in records" :key="index" :href="info[index]">
@@ -116,7 +120,8 @@ export default {
   data: () => ({
     shaped: false,
     large: false,
-    grid: true,
+    grid: false,
+<<<<<<< HEAD
     search: ''
   }),
   computed: {
@@ -127,5 +132,14 @@ export default {
       })
     }
   }
+=======
+    items: [
+      { icon: true, title: 'Jason Oner', avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg' },
+      { title: 'Travis Howard', avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg' },
+      { title: 'Ali Connors', avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg' },
+      { title: 'Cindy Baker', avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg' }
+    ]
+  })
+>>>>>>> 80df60561cf1c9d00b5aecb3f989126ed2db5417
 }
 </script>
