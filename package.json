@@ -1,7 +1,7 @@
 {
   "name": "fan-gallery",
   "version": "1.0.0",
-  "description": "My beautiful Nuxt.js project",
+  "description": "My beautiful Fan project",
   "author": "avimehenwal",
   "private": true,
   "scripts": {

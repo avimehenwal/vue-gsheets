@@ -31,15 +31,17 @@
       <v-card class="mx-auto" max-width="1000">
         <v-toolbar color="indigo" dark>
           <!-- <v-app-bar-nav-icon /> -->
-          <v-toolbar-title>Animes I have watched during quarentine {{ records }}</v-toolbar-title>
+          <v-toolbar-title>
+            My Quarentine Anime List {{ records }}
+          </v-toolbar-title>
           <v-spacer />
-          <v-text-field
+          <!-- <v-text-field
             v-model="search"
             append-icon="mdi-magnify"
             label="Search"
             single-line
             hide-details
-          />
+          /> -->
         </v-toolbar>
         <v-list two-line subheader>
           <v-list-item v-for="index in records" :key="index" :href="info[index]">
@@ -52,7 +54,7 @@
               <v-list-item-subtitle v-text="subtitle[index]" />
             </v-list-item-content>
 
-            <v-list-item-icon>
+            <!-- <v-list-item-icon>
               <v-rating
                 class="text-center"
                 :value="Number(rating[index])"
@@ -62,7 +64,7 @@
                 readonly
                 :large="large"
               />
-            </v-list-item-icon>
+            </v-list-item-icon> -->
             <!-- <v-list-item-action>
               <v-btn icon>
                 <v-icon color="grey lighten-1">
