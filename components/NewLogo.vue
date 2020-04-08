@@ -1,9 +1,17 @@
 <template>
-  <img class="VuetifyLogo" alt="Vuetify Logo" src="/vuetify-logo.svg" >
+  <v-btn icon class="Logo">
+    <v-icon color="warning">mdi-guy-fawkes-mask</v-icon>
+  </v-btn>
 </template>
 
+<script>
+export default {
+  name: 'NewLogo'
+}
+</script>
+
 <style>
-.VuetifyLogo {
+.Logo {
   height:180px;
   width: 180px;
   transform: rotateY(560deg);

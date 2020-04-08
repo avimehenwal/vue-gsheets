@@ -6,23 +6,19 @@
 
 * [ ] Add anime list
 * [ ] Add character details
+* https://www.gamevix.com/games/browse/best-rated
 
+## Learning
 
-## Build Setup
+### Parsing data from google sheets
 
-```bash
-# install dependencies
-$ yarn install
+* The JSON retrieves data from each cell starting from the top-left most and then pushes the data one by one into an array.
+* [Find the formula for all index belonging to a certain table column](https://medium.com/dali-lab/google-sheets-and-json-easy-backend-e29e9ef3df2)
 
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+table_header = 1
+table_total_records = 5 (4 + 1 header)
+table_total_columns = 6
+items_1 = 1 + [0..] table_total_columns
+1, 7, 13, 19
+```

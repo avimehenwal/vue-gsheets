@@ -40,29 +40,22 @@
         icon
         @click.stop="clipped = !clipped"
       >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
         <v-icon>mdi-minus</v-icon>
       </v-btn>
-      <v-toolbar-title v-text="title" />
       <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
+      <v-toolbar-title v-text="title" />
+      <NewLogo />
+      <!-- <v-btn icon @click.stop="rightDrawer = !rightDrawer" >
         <v-icon>mdi-menu</v-icon>
-      </v-btn>
+      </v-btn> -->
     </v-app-bar>
     <v-content>
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
-    <v-navigation-drawer
+
+    <!-- <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
       temporary
@@ -78,19 +71,23 @@
           <v-list-item-title>Switch drawer (click me)</v-list-item-title>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
+
     <!-- Footer -->
-    <img class="VuetifyLogo" alt="Vuetify Logo" src="/wave.svg">
+    <img alt="Vuetify Logo" src="/wave.svg">
   </v-app>
 </template>
 
 <script>
+import NewLogo from '@/components/NewLogo.vue'
 export default {
+  components: {
+    NewLogo
+  },
   data () {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
+      clipped: true,
+      drawer: true,
       items: [
         {
           icon: 'mdi-home',
@@ -98,20 +95,25 @@ export default {
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
+          icon: 'mdi-file-image',
           title: 'Images',
           to: '/image'
         },
         {
-          icon: 'mdi-apps',
-          title: 'Text Gallery',
-          to: '/textimages'
+          icon: 'mdi-comment-quote',
+          title: 'Quotes',
+          to: '/quotes'
+        },
+        {
+          icon: 'mdi-chart-timeline',
+          title: 'MHA Arcs Timeline',
+          to: '/timeline'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Fan Gallery'
+      title: 'Animation Fan Project'
     }
   }
 }
