@@ -108,12 +108,17 @@ export default {
           icon: 'mdi-chart-timeline',
           title: 'MHA Arcs Timeline',
           to: '/timeline'
+        },
+        {
+          icon: 'mdi-format-list-bulleted-square',
+          title: 'Anime List',
+          to: '/animelist'
         }
       ],
-      miniVariant: false,
+      miniVariant: true,
       right: true,
       rightDrawer: false,
-      title: 'Animation Fan Project'
+      title: '@avi - My Animation Fan Project'
     }
   }
 }
