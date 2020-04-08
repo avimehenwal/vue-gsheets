@@ -87,11 +87,11 @@ export default {
   data () {
     return {
       clipped: true,
-      drawer: true,
+      drawer: false,
       items: [
         {
           icon: 'mdi-home',
-          title: 'Welcome',
+          title: 'My Animes',
           to: '/'
         },
         {
@@ -115,7 +115,7 @@ export default {
           to: '/animelist'
         }
       ],
-      miniVariant: true,
+      miniVariant: false,
       right: true,
       rightDrawer: false,
       title: '@avi - My Animation Fan Project'
