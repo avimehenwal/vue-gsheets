@@ -111,8 +111,8 @@ export default {
         },
         {
           icon: 'mdi-format-list-bulleted-square',
-          title: 'Anime List',
-          to: '/animelist'
+          title: 'Test',
+          to: '/test'
         }
       ],
       miniVariant: false,

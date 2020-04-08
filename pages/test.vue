@@ -3,12 +3,13 @@
     <div v-if="grid">
       <v-row>
         <v-col v-for="(index) in records" :key="index" cols="12" md="4">
-          <v-card dark outlined :href="info[index]" hover :shaped="shaped">
-            <v-img class="align-end" :alt="title[index]" :src="image[index]" />
+          <v-card dark outlined hover :shaped="shaped">
+            <v-img :alt="title[index]" :src="image[index]" />
             <v-card-title> {{ title[index] }} </v-card-title>
-            <v-card-subtitle> {{ subtitle[index] }} </v-card-subtitle>
-            <v-card-text>
-              <!-- <div class="text-center mt-12"> -->
+            <v-card-subtitle>
+              {{ subtitle[index] }}
+            </v-card-subtitle>
+            <v-card-actions>
               <v-rating
                 class="text-center"
                 :value="Number(rating[index])"
@@ -18,8 +19,8 @@
                 readonly
                 :large="large"
               />
-              <!-- </div> -->
-            </v-card-text>
+              <v-btn outline text small :href="info[index]">details</v-btn>
+            </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
@@ -118,7 +119,7 @@ export default {
   data: () => ({
     shaped: false,
     large: false,
-    grid: false,
+    grid: true,
     search: ''
   }),
   computed: {
