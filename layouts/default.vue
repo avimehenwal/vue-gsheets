@@ -104,8 +104,8 @@ export default {
         },
         {
           icon: 'mdi-apps',
-          title: 'Text Gallery',
-          to: '/textimages'
+          title: 'Quotes',
+          to: '/quotes'
         },
         {
           icon: 'mdi-apps',

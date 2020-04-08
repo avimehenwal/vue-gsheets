@@ -13,7 +13,7 @@
 ### Parsing data from google sheets
 
 * The JSON retrieves data from each cell starting from the top-left most and then pushes the data one by one into an array.
-* Find the formula for all index belonging to a certain table column
+* [Find the formula for all index belonging to a certain table column](https://medium.com/dali-lab/google-sheets-and-json-easy-backend-e29e9ef3df2)
 
 ```
 table_header = 1
