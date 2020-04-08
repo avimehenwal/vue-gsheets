@@ -1,39 +1,51 @@
 <template>
-  <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
-    <!-- <div v-for="index in records" :key="index">
+  <div>
+    <v-timeline
+      align-top
+      :dense="$vuetify.breakpoint.smAndDown"
+      :reverse="reverse"
+      :small="small"
+    >
+      <!-- <div v-for="index in records" :key="index">
       {{ index }}
-      {{color[index]}}
-      {{icon[index]}}
-      {{tag[index]}}
-      {{title[index]}}
-      {{text[index]}}
-      {{button[index]}}
+      {{ color[index] }}
+      {{ icon[index] }}
+      {{ tag[index] }}
+      {{ title[index] }}
+      {{ text[index] }}
+      {{ button[index] }}
     </div> -->
 
-    <v-timeline-item
-      v-for="index in records"
-      :key="index"
-      :color="color[index]"
-      :icon="icon[index]"
-      fill-dot
-      large
-    >
-      <span slot="opposite">
-        <v-chip color="primary"> {{ tag[index] }} </v-chip>
-      </span>
-      <v-card :color="color[index]" dark>
-        <v-card-title class="title">
-          {{ title[index] }}
-        </v-card-title>
-        <v-card-text class="white text--primary">
-          <p class="black--text"> {{ text[index] }}</p>
-          <v-btn :color="color[index]" class="mx-0" outlined>
-            {{ button[index] }}
-          </v-btn>
-        </v-card-text>
-      </v-card>
-    </v-timeline-item>
-  </v-timeline>
+      <v-timeline-item
+        v-for="index in records"
+        :key="index"
+        :color="color[index]"
+        :icon="icon[index]"
+        fill-dot
+        large
+      >
+        <span slot="opposite">
+          <v-chip color="primary"> {{ tag[index] }} </v-chip>
+        </span>
+        <v-card :color="color[index]" dark>
+          <v-card-title class="title">
+            {{ title[index] }}
+          </v-card-title>
+          <v-card-text class="white text--primary">
+            <p class="black--text">
+              {{ text[index] }}
+            </p>
+            <v-btn :color="color[index]" class="mx-0" outlined>
+              {{ button[index] }}
+            </v-btn>
+          </v-card-text>
+        </v-card>
+      </v-timeline-item>
+    </v-timeline>
+
+    <v-switch v-model="reverse" label="Toggle direction" />
+    <v-switch v-model="small" label="Toggle small" />
+  </div>
 </template>
 
 <script>
@@ -73,6 +85,10 @@ export default {
       records,
       columns
     }
-  }
+  },
+  data: () => ({
+    reverse: true,
+    small: false
+  })
 }
 </script>
