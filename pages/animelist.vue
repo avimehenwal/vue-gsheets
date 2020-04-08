@@ -2,7 +2,7 @@
   <v-container>
     <div v-if="grid">
       <v-row>
-        <v-col v-for="(index) in records" :key="index" cols="12" md="3">
+        <v-col v-for="(index) in records" :key="index" cols="12" md="4">
           <v-card dark outlined :href="info[index]" hover :shaped="shaped">
             <v-img class="align-end" :alt="title[index]" :src="image[index]" />
             <v-card-title> {{ title[index] }} </v-card-title>
@@ -116,7 +116,7 @@ export default {
   data: () => ({
     shaped: false,
     large: false,
-    grid: true,
+    grid: false,
     search: ''
   }),
   computed: {
