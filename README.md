@@ -11,6 +11,12 @@
 
 ## Learning
 
+* Image lazy loading
+* force client side rendering
+* Google blocks CORS requests
+  * Who can access what resource from whome
+
+
 ## Issues
 
 * https://stackoverflow.com/questions/5881139/how-to-block-iframe-call

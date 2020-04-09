@@ -1,19 +1,22 @@
 <template>
   <v-container>
+    <v-alert dense text outlined type="success">
+      <strong> {{ records }} </strong> Records loaded ...
+    </v-alert>
     <div v-if="grid">
       <v-row>
-        <v-col v-for="(index) in records" :key="index" cols="12" md="4">
-          <v-card dark outlined hover :shaped="shaped" :to="route[index]">
+        <v-col v-for="(item) in items" :key="item.TITLE" cols="12" md="4">
+          <v-card dark outlined hover :shaped="shaped" :to="item.TO">
             <v-img
-              :alt="title[index]"
-              :src="image[index]"
+              :alt="item.TITLE"
+              :src="item.IMAGE"
               lazy-src="https://picsum.photos/id/1011/100/60"
               aspect-ratio="1"
             />
-            <v-card-title> {{ title[index] }} </v-card-title>
+            <v-card-title> {{ item.TITLE }} </v-card-title>
             <v-card-subtitle>
-              {{ subtitle[index] }}
-              <span v-if="route[index] != '/'">
+              {{ item.SUBTITLE }}
+              <span v-if="item.TO != '/'">
                 <v-icon class="float-right" small color="success darken-1">
                   mdi-circle
                 </v-icon>
@@ -28,9 +31,9 @@
                   half-increments
                   readonly
                   :large="large"
-                  :value="Number(rating[index])"
+                  :value="Number(item.RATING)"
                 />
-                <v-btn text small :href="info[index]">
+                <v-btn text small :href="item.EXTERNAL">
                   details
                 </v-btn>
               </v-card-actions>
@@ -47,7 +50,7 @@
         <v-toolbar color="indigo" dark>
           <!-- <v-app-bar-nav-icon /> -->
           <v-toolbar-title>
-            My Quarentine Anime List {{ records }}
+            Quarentine Anime List
           </v-toolbar-title>
           <v-spacer />
           <!-- <v-text-field
@@ -59,14 +62,19 @@
           /> -->
         </v-toolbar>
         <v-list two-line subheader>
-          <v-list-item v-for="index in records" :key="index" :href="info[index]">
+          <v-list-item v-for="item in items" :key="item.TITLE" :href="item.TO">
             <v-list-item-avatar>
-              <v-img :src="image[index]" />
+              <v-img :src="item.IMAGE" />
             </v-list-item-avatar>
 
             <v-list-item-content>
-              <v-list-item-title v-text="title[index]" />
-              <v-list-item-subtitle v-text="subtitle[index]" />
+              <v-list-item-title v-text="item.TITLE" />
+              <v-list-item-subtitle v-text="item.SUBTITLE" />
+              <v-list-item-action>
+                <v-btn text :href="item.EXTERNAL">
+                  details
+                </v-btn>
+              </v-list-item-action>
             </v-list-item-content>
 
             <!-- <v-list-item-icon>
@@ -107,30 +115,24 @@ export default {
     const entry = data.feed.entry
     const columns = 6
     const records = (entry.length / columns) - 1
-    const title = []
-    const subtitle = []
-    const rating = []
-    const image = []
-    const info = []
-    const route = []
-    for (let i = 0; i < entry.length; i += columns) {
-      // entry[i].content.$t retrieves the content of each cell
-      title.push(entry[i].content.$t)
-      subtitle.push(entry[i + 1].content.$t)
-      rating.push(entry[i + 2].content.$t)
-      image.push(entry[i + 3].content.$t)
-      info.push(entry[i + 4].content.$t)
-      route.push(entry[i + 5].content.$t)
+    const headers = []
+    const items = []
+    for (let i = 0; i < columns; i++) {
+      headers.push(entry[i].content.$t)
+    }
+    for (let i = headers.length; i < entry.length; i += columns) {
+      const item = {}
+      for (let j = 0; j < headers.length; j++) {
+        // entry[i].content.$t retrieves the content of each cell
+        item[headers[j]] = entry[i + j].content.$t
+      }
+      items.push(item)
     }
     return {
       records,
       columns,
-      title,
-      subtitle,
-      rating,
-      image,
-      info,
-      route
+      items,
+      headers
     }
   },
   data: () => ({
