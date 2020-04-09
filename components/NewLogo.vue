@@ -16,6 +16,7 @@ export default {
   width: 180px;
   transform: rotateY(560deg);
   animation: turn 3.5s ease-out forwards 1s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes turn {

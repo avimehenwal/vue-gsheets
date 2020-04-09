@@ -1,5 +1,25 @@
 <template>
   <div>
+    <div>
+      <v-chip outlined color="warning" large>
+        {{ records }}
+      </v-chip>
+      <Button text="wiki page" href="https://en.wikipedia.org/wiki/My_Hero_Academia" />
+      <Button text="read manga" href="https://w7.myheromanga.com/" />
+    </div>
+    <!-- MANGA details -->
+    <v-container class="right">
+      <div>My favourite OST music</div>
+      <iframe
+        width="560"
+        height="315"
+        :src="youtube"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      />
+    </v-container>
+
     <v-timeline
       align-top
       :dense="$vuetify.breakpoint.smAndDown"
@@ -49,12 +69,19 @@
 </template>
 
 <script>
+import Button from '@/components/button.vue'
+// import Youtube from '@/components/Youtube.vue'
+
 const YOURGOOGLESHEETCODE = '1FR9QOFhMZBG6GVcNTbBb3hc8wzG47t0-_BmZuzSBi8U'
 const SHEETPAGENUMBER = '1'
 const URL = 'https://spreadsheets.google.com/feeds/cells/' +
       YOURGOOGLESHEETCODE + '/' + SHEETPAGENUMBER + '/public/full?alt=json'
 
 export default {
+  components: {
+    // Youtube,
+    Button
+  },
   async asyncData ({ $axios }) {
     const data = await $axios.$get(URL)
     const entry = data.feed.entry
@@ -76,19 +103,20 @@ export default {
       button.push(entry[i + 5].content.$t)
     }
     return {
+      records,
+      columns,
       color,
       icon,
       tag,
       title,
       text,
-      button,
-      records,
-      columns
+      button
     }
   },
   data: () => ({
     reverse: true,
-    small: false
+    small: false,
+    youtube: 'https://www.youtube.com/embed/K9840msu1CM'
   })
 }
 </script>

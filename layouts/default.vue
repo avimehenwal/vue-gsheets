@@ -8,6 +8,16 @@
       app
     >
       <v-list>
+        <v-list-item two-line to="/">
+          <v-list-item-avatar> <NewLogo /> </v-list-item-avatar>
+
+          <v-list-item-content>
+            <v-list-item-title>Fan Animae project</v-list-item-title>
+            <v-list-item-subtitle>v1.1.8</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider />
+
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -20,6 +30,25 @@
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider />
+
+        <v-list-item target="_blank" href="https://www.linkedin.com/in/avimehenwal/">
+          <v-list-item-avatar>
+            <v-img src="https://raw.githubusercontent.com/avimehenwal/avimehenwal/master/Images/avimehenwal.jpg" />
+          </v-list-item-avatar>
+          <v-list-item-action>
+            <v-list-item-title>Avi Mehenwal</v-list-item-title>
+            <v-list-item-subtitle>Say hello / Contact me</v-list-item-subtitle>
+          </v-list-item-action>
+        </v-list-item>
+        <v-list-item href="https://www.buymeacoffee.com/F1j07cV" target="_blank">
+          <v-list-item-content>
+            <v-img
+              alt="Buy Me A Coffee"
+              src="https://cdn.buymeacoffee.com/buttons/default-white.png"
+            />
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -107,18 +136,18 @@ export default {
         {
           icon: 'mdi-chart-timeline',
           title: 'MHA Arcs Timeline',
-          to: '/timeline'
+          to: '/mha'
         },
         {
           icon: 'mdi-format-list-bulleted-square',
-          title: 'Anime List',
-          to: '/animelist'
+          title: 'Test',
+          to: '/test'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: '@avi - My Animation Fan Project'
+      title: 'My Anime Fan Project'
     }
   }
 }

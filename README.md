@@ -7,8 +7,14 @@
 * [ ] Add anime list
 * [ ] Add character details
 * https://www.gamevix.com/games/browse/best-rated
+* [ ] Add manga details
 
 ## Learning
+
+## Issues
+
+* https://stackoverflow.com/questions/5881139/how-to-block-iframe-call
+
 
 ### Parsing data from google sheets
 
@@ -22,3 +28,7 @@ table_total_columns = 6
 items_1 = 1 + [0..] table_total_columns
 1, 7, 13, 19
 ```
+
+## Resources
+
+* https://www.grapecity.com/blogs/adding-excel-import-and-export-to-your-vue-app
