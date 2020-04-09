@@ -22,3 +22,7 @@ table_total_columns = 6
 items_1 = 1 + [0..] table_total_columns
 1, 7, 13, 19
 ```
+
+## Resources
+
+* https://www.grapecity.com/blogs/adding-excel-import-and-export-to-your-vue-app

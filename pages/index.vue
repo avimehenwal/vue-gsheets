@@ -3,11 +3,16 @@
     <div v-if="grid">
       <v-row>
         <v-col v-for="(index) in records" :key="index" cols="12" md="4">
-          <v-card dark outlined hover :shaped="shaped">
+          <v-card dark outlined hover :shaped="shaped" :to="route[index]">
             <v-img :alt="title[index]" :src="image[index]" />
             <v-card-title> {{ title[index] }} </v-card-title>
             <v-card-subtitle>
               {{ subtitle[index] }}
+              <span v-if="route[index] != '/'">
+                <v-icon class="float-right" small color="success darken-1">
+                  mdi-circle
+                </v-icon>
+              </span>
             </v-card-subtitle>
             <v-card-actions>
               <v-rating
@@ -19,7 +24,9 @@
                 readonly
                 :large="large"
               />
-              <v-btn outline text small :href="info[index]">details</v-btn>
+              <v-btn text small :href="info[index]">
+                details
+              </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -91,13 +98,14 @@ export default {
   async asyncData ({ $axios }) {
     const data = await $axios.$get(URL)
     const entry = data.feed.entry
-    const columns = 5
+    const columns = 6
     const records = (entry.length / columns) - 1
     const title = []
     const subtitle = []
     const rating = []
     const image = []
     const info = []
+    const route = []
     for (let i = 0; i < entry.length; i += columns) {
       // entry[i].content.$t retrieves the content of each cell
       title.push(entry[i].content.$t)
@@ -105,6 +113,7 @@ export default {
       rating.push(entry[i + 2].content.$t)
       image.push(entry[i + 3].content.$t)
       info.push(entry[i + 4].content.$t)
+      route.push(entry[i + 5].content.$t)
     }
     return {
       records,
@@ -113,7 +122,8 @@ export default {
       subtitle,
       rating,
       image,
-      info
+      info,
+      route
     }
   },
   data: () => ({

@@ -8,6 +8,16 @@
       app
     >
       <v-list>
+        <v-list-item two-line to="/">
+          <v-list-item-avatar> <NewLogo /> </v-list-item-avatar>
+
+          <v-list-item-content>
+            <v-list-item-title>Fan Animae project</v-list-item-title>
+            <v-list-item-subtitle>@avi v0.1.8</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider />
+
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -20,6 +30,20 @@
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider />
+
+        <v-list-item>
+          <v-list-item-content>
+            <a href="https://www.buymeacoffee.com/F1j07cV" target="_default">
+              <v-img
+                alt="Buy Me A Coffee"
+                height="40px"
+                width="180px"
+                src="https://cdn.buymeacoffee.com/buttons/default-white.png"
+              />
+            </a>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -107,7 +131,7 @@ export default {
         {
           icon: 'mdi-chart-timeline',
           title: 'MHA Arcs Timeline',
-          to: '/timeline'
+          to: '/mha'
         },
         {
           icon: 'mdi-format-list-bulleted-square',
