@@ -5,7 +5,7 @@
 ## Demo
 
 ![Demo homepage](/demo/Screenshot_20200409_183322.png)
-
+![Google Analyticas](/demo/Screenshot_20200409_203011.png)
 ---
 
 ## ToDO
@@ -15,6 +15,7 @@
 * https://www.gamevix.com/games/browse/best-rated
 * [ ] Add manga details
 * [ ] Add data transform Mixin
+* [ ] Add google analytics
 
 ## Learning
 
