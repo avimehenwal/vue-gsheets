@@ -1,6 +1,5 @@
 export const sheetMixin = {
   created () {
-    console.log('Hello from Mixin')
     this.fetchData()
   },
   data: () => ({

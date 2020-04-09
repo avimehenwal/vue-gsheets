@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-card href="https://github.com/avimehenwal/fan-gallery/blob/develop/pages/index.vue">
-    <h1>Mixin</h1>
+      <h1>Mixin</h1>
       <v-btn
         class="float-right"
         icon
@@ -22,9 +22,6 @@ export default {
     SHEETPAGENUMBER: 3,
     COLUMNS: 6,
     link: 'https://vuejs.org/v2/guide/forms.html'
-  }),
-  created () {
-    console.log('Hello from COMPONENET')
-  }
+  })
 }
 </script>
