@@ -43,12 +43,12 @@ export default {
       id: 'UA-113741959-5'
     }]
   ],
-  googleAnalytics: {
-    debug: {
-      enabled: true,
-      sendHitTask: true
-    }
-  },
+  // googleAnalytics: {
+  //   debug: {
+  //     enabled: true,
+  //     sendHitTask: true
+  //   }
+  // },
   /*
   ** Nuxt.js modules
   */
