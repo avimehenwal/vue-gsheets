@@ -11,6 +11,11 @@
 
 ## Learning
 
+## Issues
+
+* https://stackoverflow.com/questions/5881139/how-to-block-iframe-call
+
+
 ### Parsing data from google sheets
 
 * The JSON retrieves data from each cell starting from the top-left most and then pushes the data one by one into an array.

@@ -8,6 +8,17 @@
       <Button text="read manga" href="https://w7.myheromanga.com/" />
     </div>
     <!-- MANGA details -->
+    <v-container class="right">
+      <div>My favourite OST music</div>
+      <iframe
+        width="560"
+        height="315"
+        :src="youtube"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      />
+    </v-container>
 
     <v-timeline
       align-top
@@ -59,6 +70,7 @@
 
 <script>
 import Button from '@/components/button.vue'
+// import Youtube from '@/components/Youtube.vue'
 
 const YOURGOOGLESHEETCODE = '1FR9QOFhMZBG6GVcNTbBb3hc8wzG47t0-_BmZuzSBi8U'
 const SHEETPAGENUMBER = '1'
@@ -67,6 +79,7 @@ const URL = 'https://spreadsheets.google.com/feeds/cells/' +
 
 export default {
   components: {
+    // Youtube,
     Button
   },
   async asyncData ({ $axios }) {
@@ -102,7 +115,8 @@ export default {
   },
   data: () => ({
     reverse: true,
-    small: false
+    small: false,
+    youtube: 'https://www.youtube.com/embed/K9840msu1CM'
   })
 }
 </script>
