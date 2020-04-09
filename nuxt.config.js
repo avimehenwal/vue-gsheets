@@ -40,7 +40,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
     ['@nuxtjs/google-analytics', {
-      id: 'UA-113741959-5'
+      id: process.env.GA_ID || ''
     }]
   ],
   googleAnalytics: {
