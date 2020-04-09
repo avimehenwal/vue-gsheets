@@ -5,7 +5,7 @@
     </v-alert>
     <div v-if="grid">
       <v-row>
-        <v-col v-for="(item) in items" :key="item.TITLE" cols="12" md="4">
+        <v-col v-for="(item) in items" :key="item.TITLE" cols="12" :md="cards">
           <v-card dark outlined hover :shaped="shaped" :to="item.TO">
             <v-img
               :alt="item.TITLE"
@@ -13,7 +13,9 @@
               lazy-src="https://picsum.photos/id/1011/100/60"
               aspect-ratio="1"
             />
-            <v-card-title> {{ item.TITLE }} </v-card-title>
+            <v-card-title :href="item.EXTERNAL">
+              {{ item.TITLE }}
+            </v-card-title>
             <v-card-subtitle>
               {{ item.SUBTITLE }}
               <span v-if="item.TO != '/'">
@@ -33,16 +35,41 @@
                   :large="large"
                   :value="Number(item.RATING)"
                 />
-                <v-btn text small :href="item.EXTERNAL">
-                  details
+                <v-btn
+                  class="float-right"
+                  icon
+                  color="warning"
+                  :href="item.EXTERNAL"
+                  target="_blank"
+                >
+                  <v-icon>mdi-open-in-new</v-icon>
                 </v-btn>
               </v-card-actions>
             </client-only>
           </v-card>
         </v-col>
       </v-row>
-      <v-switch v-model="shaped" label="Toggle shape" />
-      <v-switch v-model="large" label="Toggle rating size" />
+
+      <v-row>
+        <v-col cols="12" xs="6" md="2">
+          <v-switch v-model="shaped" dense label="Toggle shape" />
+        </v-col>
+        <v-col cols="12" xs="6" md="2">
+          <v-switch v-model="large" dense label="Toggle rating" />
+        </v-col>
+        <v-col cols="12" xs="6" md="2">
+          <v-switch v-model="grid" dense label="Toggle view" />
+        </v-col>
+        <v-col cols="12" xs="6" md="2">
+          <v-select
+            v-model="numCards"
+            :items="numCardsValues"
+            label="Cards"
+            outlined
+            dense
+          />
+        </v-col>
+      </v-row>
     </div>
 
     <div v-else>
@@ -99,7 +126,6 @@
         </v-list>
       </v-card>
     </div>
-    <v-switch v-model="grid" label="Toggle Grid/List view" />
   </v-container>
 </template>
 
@@ -114,6 +140,8 @@ export default {
     shaped: false,
     large: false,
     grid: true,
+    numCards: 4,
+    numCardsValues: [1, 2, 3, 4, 6],
     search: ''
   }),
   computed: {
@@ -122,6 +150,9 @@ export default {
       return this.title.filter((post) => {
         return post.title.toLowerCase().includes(this.search.toLowerCase())
       })
+    },
+    cards () {
+      return (12 / this.numCards)
     }
   }
 }

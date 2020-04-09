@@ -4,7 +4,11 @@
     <v-row>
       <v-col v-for="(item, index) in images" :key="item.pathLong" cols="12" md="4">
         <v-card>
-          <v-img class="white--text align-end" :src="item.pathLong">
+          <v-img
+            class="white--text align-end"
+            lazy-src="https://picsum.photos/id/1011/100/60"
+            :src="item.pathLong"
+          >
             <v-card-title>
               <v-btn fab outlined color="white">
                 {{ index }}
