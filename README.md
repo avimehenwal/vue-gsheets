@@ -8,6 +8,7 @@
 * [ ] Add character details
 * https://www.gamevix.com/games/browse/best-rated
 * [ ] Add manga details
+* [ ] Add data transform Mixin
 
 ## Learning
 
