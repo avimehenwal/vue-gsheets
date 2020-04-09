@@ -7,6 +7,7 @@
 * [ ] Add anime list
 * [ ] Add character details
 * https://www.gamevix.com/games/browse/best-rated
+* [ ] Add manga details
 
 ## Learning
 

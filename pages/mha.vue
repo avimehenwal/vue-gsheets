@@ -1,5 +1,14 @@
 <template>
   <div>
+    <div>
+      <v-chip outlined color="warning" large>
+        {{ records }}
+      </v-chip>
+      <Button text="wiki page" href="https://en.wikipedia.org/wiki/My_Hero_Academia" />
+      <Button text="read manga" href="https://w7.myheromanga.com/" />
+    </div>
+    <!-- MANGA details -->
+
     <v-timeline
       align-top
       :dense="$vuetify.breakpoint.smAndDown"
@@ -49,12 +58,17 @@
 </template>
 
 <script>
+import Button from '@/components/button.vue'
+
 const YOURGOOGLESHEETCODE = '1FR9QOFhMZBG6GVcNTbBb3hc8wzG47t0-_BmZuzSBi8U'
 const SHEETPAGENUMBER = '1'
 const URL = 'https://spreadsheets.google.com/feeds/cells/' +
       YOURGOOGLESHEETCODE + '/' + SHEETPAGENUMBER + '/public/full?alt=json'
 
 export default {
+  components: {
+    Button
+  },
   async asyncData ({ $axios }) {
     const data = await $axios.$get(URL)
     const entry = data.feed.entry
@@ -76,14 +90,14 @@ export default {
       button.push(entry[i + 5].content.$t)
     }
     return {
+      records,
+      columns,
       color,
       icon,
       tag,
       title,
       text,
-      button,
-      records,
-      columns
+      button
     }
   },
   data: () => ({
