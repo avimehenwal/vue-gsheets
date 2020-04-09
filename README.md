@@ -1,6 +1,6 @@
 # fan-gallery
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ad7aef6d-3986-4272-98e3-bb8224f1e638/deploy-status)](https://app.netlify.com/sites/fangallery/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0cb96c66-4baa-4eb2-bc20-ae8616ac584d/deploy-status)](https://app.netlify.com/sites/fangallery/deploys)
 
 ## Demo
 
