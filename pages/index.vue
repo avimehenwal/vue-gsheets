@@ -4,7 +4,12 @@
       <v-row>
         <v-col v-for="(index) in records" :key="index" cols="12" md="4">
           <v-card dark outlined hover :shaped="shaped" :to="route[index]">
-            <v-img :alt="title[index]" :src="image[index]" />
+            <v-img
+              :alt="title[index]"
+              :src="image[index]"
+              lazy-src="https://picsum.photos/id/11/100/60"
+              aspect-ratio="1"
+            />
             <v-card-title> {{ title[index] }} </v-card-title>
             <v-card-subtitle>
               {{ subtitle[index] }}
