@@ -39,11 +39,10 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
-    ['@nuxtjs/google-analytics', {
-      id: process.env.GA_ID || ''
-    }]
+    '@nuxtjs/google-analytics'
   ],
   googleAnalytics: {
+    id: process.env.GA_ID || '',
     debug: {
       enabled: true,
       sendHitTask: true
