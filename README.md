@@ -8,8 +8,15 @@
 * [ ] Add character details
 * https://www.gamevix.com/games/browse/best-rated
 * [ ] Add manga details
+* [ ] Add data transform Mixin
 
 ## Learning
+
+* Image lazy loading
+* force client side rendering
+* Google blocks CORS requests
+  * Who can access what resource from whome
+
 
 ## Issues
 

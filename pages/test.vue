@@ -1,26 +1,22 @@
 <template>
-  <!-- <vue-core-video-player src="https://youtu.be/wMVp1G63WNU" /> -->
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/wMVp1G63WNU"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  />
+  <v-container>
+    <h1>Mixin</h1>
+    {{ records }}<br>
+    {{ items }}
+  </v-container>
 </template>
 
 <script>
-// import VueCoreVideoPlayer from 'vue-core-video-player'
-// import VueYoutubePlayer from 'vue-youtube-player'
+import { sheetMixin } from '@/Mixins.js'
 
 export default {
-  components: {
-    // VueCoreVideoPlayer,
-    // VueYoutubePlayer
-  },
+  mixins: [sheetMixin],
   data: () => ({
-    youtubeUrl: 'https://youtu.be/wMVp1G63WNU'
-  })
+    SHEETPAGENUMBER: 3,
+    COLUMNS: 6
+  }),
+  created () {
+    console.log('Hello from COMPONENET')
+  }
 }
 </script>
