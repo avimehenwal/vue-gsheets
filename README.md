@@ -2,6 +2,12 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ad7aef6d-3986-4272-98e3-bb8224f1e638/deploy-status)](https://app.netlify.com/sites/fangallery/deploys)
 
+## Demo
+
+![Demo homepage](/demo/Screenshot_20200409_183322.png)
+
+---
+
 ## ToDO
 
 * [ ] Add anime list
