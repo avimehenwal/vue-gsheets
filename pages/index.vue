@@ -104,38 +104,13 @@
 </template>
 
 <script>
-const YOURGOOGLESHEETCODE = '1FR9QOFhMZBG6GVcNTbBb3hc8wzG47t0-_BmZuzSBi8U'
-const SHEETPAGENUMBER = '3'
-const URL = 'https://spreadsheets.google.com/feeds/cells/' +
-      YOURGOOGLESHEETCODE + '/' + SHEETPAGENUMBER + '/public/full?alt=json'
+import { sheetMixin } from '@/Mixins.js'
 
 export default {
-  async asyncData ({ $axios }) {
-    const data = await $axios.$get(URL)
-    const entry = data.feed.entry
-    const columns = 6
-    const records = (entry.length / columns) - 1
-    const headers = []
-    const items = []
-    for (let i = 0; i < columns; i++) {
-      headers.push(entry[i].content.$t)
-    }
-    for (let i = headers.length; i < entry.length; i += columns) {
-      const item = {}
-      for (let j = 0; j < headers.length; j++) {
-        // entry[i].content.$t retrieves the content of each cell
-        item[headers[j]] = entry[i + j].content.$t
-      }
-      items.push(item)
-    }
-    return {
-      records,
-      columns,
-      items,
-      headers
-    }
-  },
+  mixins: [sheetMixin],
   data: () => ({
+    SHEETPAGENUMBER: 3,
+    COLUMNS: 6,
     shaped: false,
     large: false,
     grid: true,

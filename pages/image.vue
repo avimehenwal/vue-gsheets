@@ -2,7 +2,7 @@
   <div>
     {{ itemLength }}
     <v-row>
-      <v-col v-for="(item, index) in images" :key="item" cols="12" md="4">
+      <v-col v-for="(item, index) in images" :key="item.pathLong" cols="12" md="4">
         <v-card>
           <v-img class="white--text align-end" :src="item.pathLong">
             <v-card-title>
@@ -23,7 +23,6 @@
         reverse-transition="fade-transition"
         transition="fade-transition"
       />
-      {{ item }}
     </v-carousel>
   </div>
 </template>
