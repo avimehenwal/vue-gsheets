@@ -7,7 +7,7 @@
             <v-img
               :alt="title[index]"
               :src="image[index]"
-              lazy-src="https://picsum.photos/id/11/100/60"
+              lazy-src="https://picsum.photos/id/1011/100/60"
               aspect-ratio="1"
             />
             <v-card-title> {{ title[index] }} </v-card-title>
@@ -19,20 +19,22 @@
                 </v-icon>
               </span>
             </v-card-subtitle>
-            <v-card-actions>
-              <v-rating
-                class="text-center"
-                :value="Number(rating[index])"
-                color="warning"
-                background-color="grey darken-1"
-                half-increments
-                readonly
-                :large="large"
-              />
-              <v-btn text small :href="info[index]">
-                details
-              </v-btn>
-            </v-card-actions>
+            <client-only placeholder="Loading...">
+              <v-card-actions>
+                <v-rating
+                  class="text-center"
+                  color="warning"
+                  background-color="grey darken-1"
+                  half-increments
+                  readonly
+                  :large="large"
+                  :value="Number(rating[index])"
+                />
+                <v-btn text small :href="info[index]">
+                  details
+                </v-btn>
+              </v-card-actions>
+            </client-only>
           </v-card>
         </v-col>
       </v-row>
