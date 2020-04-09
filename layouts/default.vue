@@ -13,7 +13,7 @@
 
           <v-list-item-content>
             <v-list-item-title>Fan Animae project</v-list-item-title>
-            <v-list-item-subtitle>@avi v0.1.8</v-list-item-subtitle>
+            <v-list-item-subtitle>v1.1.8</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
         <v-divider />
@@ -34,16 +34,21 @@
         </v-list-item>
         <v-divider />
 
-        <v-list-item>
+        <v-list-item target="_blank" href="https://www.linkedin.com/in/avimehenwal/">
+          <v-list-item-avatar>
+            <v-img src="https://raw.githubusercontent.com/avimehenwal/avimehenwal/master/Images/avimehenwal.jpg" />
+          </v-list-item-avatar>
+          <v-list-item-action>
+            <v-list-item-title>Avi Mehenwal</v-list-item-title>
+            <v-list-item-subtitle>Say hello / Contact me</v-list-item-subtitle>
+          </v-list-item-action>
+        </v-list-item>
+        <v-list-item href="https://www.buymeacoffee.com/F1j07cV" target="_blank">
           <v-list-item-content>
-            <a href="https://www.buymeacoffee.com/F1j07cV" target="_default">
-              <v-img
-                alt="Buy Me A Coffee"
-                height="40px"
-                width="180px"
-                src="https://cdn.buymeacoffee.com/buttons/default-white.png"
-              />
-            </a>
+            <v-img
+              alt="Buy Me A Coffee"
+              src="https://cdn.buymeacoffee.com/buttons/default-white.png"
+            />
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -142,7 +147,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: '@avi - My Animation Fan Project'
+      title: 'My Anime Fan Project'
     }
   }
 }
