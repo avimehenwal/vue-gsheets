@@ -27,6 +27,7 @@
 ## Issues
 
 * https://stackoverflow.com/questions/5881139/how-to-block-iframe-call
+* https://stackoverflow.com/questions/44297803/what-is-the-role-of-the-package-lock-json
 
 
 ### Parsing data from google sheets
