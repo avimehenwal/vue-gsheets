@@ -6,7 +6,9 @@
         <v-card>
           <v-img class="white--text align-end" :src="item.pathLong">
             <v-card-title>
-              <v-btn fab outlined color="white"> {{ index }} </v-btn>
+              <v-btn fab outlined color="white">
+                {{ index }}
+              </v-btn>
             </v-card-title>
           </v-img>
         </v-card>

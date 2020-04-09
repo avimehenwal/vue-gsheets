@@ -1,6 +1,8 @@
 <template>
   <v-btn icon class="Logo">
-    <v-icon color="warning">mdi-guy-fawkes-mask</v-icon>
+    <v-icon color="warning">
+      mdi-guy-fawkes-mask
+    </v-icon>
   </v-btn>
 </template>
 
