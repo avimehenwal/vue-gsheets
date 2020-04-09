@@ -5,7 +5,7 @@
 ## Demo
 
 ![Demo homepage](/demo/Screenshot_20200409_183322.png)
-![Google Analyticas](/demo/Screenshot_20200409_203011.png)
+![Google Tag Manager](/demo/Screenshot_20200410_004900.png)
 ---
 
 ## ToDO

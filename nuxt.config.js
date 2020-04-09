@@ -39,7 +39,8 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/gtm'
   ],
   googleAnalytics: {
     id: process.env.GA_ID || '',
@@ -47,6 +48,9 @@ export default {
       enabled: true,
       sendHitTask: true
     }
+  },
+  gtm: {
+    id: process.env.GTM_ID || '',
   },
   /*
   ** Nuxt.js modules

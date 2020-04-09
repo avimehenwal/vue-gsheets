@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/gtm": "^2.2.3",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
