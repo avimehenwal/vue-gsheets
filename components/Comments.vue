@@ -34,7 +34,24 @@
         </v-timeline-item>
       </v-timeline>
 
-      <v-radio-group row wrap>
+      <!-- Add Comment -->
+      <div v-if="addComment">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSd1NEpiNvpe5pZ8c3-npS0ut56ThKZ9z01YEN0PD_BLGQNy9Q/viewform?embedded=true"
+          width="100%"
+          height="400"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >Loading…</iframe>
+      </div>
+      <div v-else>
+        <v-btn large color="success" @click="addComment = !addComment">
+          Add Comment +
+        </v-btn>
+      </div>
+
+      <!-- <v-radio-group row wrap>
         <v-switch v-model="alignTop" label="Toggle align-top" class="mx-4" />
         <v-switch v-model="dense" label="Toggle dense" class="mx-4" />
         <v-switch v-model="fillDot" label="Toggle fill-dot" class="mx-4" />
@@ -46,7 +63,7 @@
         <v-switch v-model="left" label="Toggle left" class="mx-4" />
         <v-switch v-model="right" label="Toggle right" class="mx-4" />
         <v-switch v-model="small" label="Toggle small" class="mx-4" />
-      </v-radio-group>
+      </v-radio-group> -->
     </div>
   </v-container>
 </template>
@@ -69,8 +86,9 @@ export default {
     iconColor: false,
     left: false,
     reverse: false,
-    right: true,
-    small: true
+    right: false,
+    small: true,
+    addComment: false
   }),
   methods: {
     humanRedableTime (timestamp) {
