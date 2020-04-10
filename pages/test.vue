@@ -1,27 +1,23 @@
 <template>
-  <v-container>
-    <v-card href="https://github.com/avimehenwal/fan-gallery/blob/develop/pages/index.vue">
-      <h1>Mixin</h1>
-      <v-btn
-        class="float-right"
-        icon
-        color="warning"
-        :href="link"
-        target="_blank"
-      >
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-card>
-  </v-container>
+  <div>
+    <Comments :items="items"/>
+  </div>
 </template>
 
 <script>
+import Comments from '@/components/Comments.vue'
+import { sheetMixin } from '@/Mixins.js'
 
 export default {
+  mixins: [sheetMixin],
+  components: {
+    Comments
+  },
   data: () => ({
-    SHEETPAGENUMBER: 3,
-    COLUMNS: 6,
-    link: 'https://vuejs.org/v2/guide/forms.html'
+    link: 'https://vuejs.org/v2/guide/forms.html',
+    SHEETPAGENUMBER: 1,
+    COLUMNS: 4,
+    YOURGOOGLESHEETCODE: '10eubbEN9rSfGPjALZnP83DR7hKasdf-mThrxzjYksLY'
   })
 }
 </script>
