@@ -126,13 +126,19 @@
         </v-list>
       </v-card>
     </div>
+    <v-divider />
+    <Comments />
   </v-container>
 </template>
 
 <script>
 import { sheetMixin } from '@/Mixins.js'
+import Comments from '@/components/Comments.vue'
 
 export default {
+  components: {
+    Comments
+  },
   mixins: [sheetMixin],
   data: () => ({
     SHEETPAGENUMBER: 3,
