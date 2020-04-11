@@ -1,6 +1,6 @@
 {
   "name": "vue-gsheets",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Transform data from published google sheets to usable vue items format",
   "main": "index.js",
   "scripts": {
