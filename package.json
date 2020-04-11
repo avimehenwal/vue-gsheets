@@ -15,8 +15,11 @@
     "vue",
     "google-sheets",
     "sheets",
+    "gsheet",
     "spreadsheet",
-    "parser"
+    "parser",
+    "nuxt",
+    "nuxtjs"
   ],
   "author": "avimehenwal",
   "license": "ISC",

@@ -1,25 +1,35 @@
-// Inputs
-// 1. Google sheet ID
-// 2. Google sheet Page Number
-// 3. Number of COLUMNS
-// returns items
+/*
+AUTHOR :  avimehenwal
+DATED  :  10th-April-2020
+PURPOSE:  Make data reusable from public google sheets
 
-export const sheetMixin = {
+Script takes following 3 inputs and returns items variable with all sheet data
+
+Mandatory Inputs Arguments
+---------------------
+1. SHEETID          - ID of google sheet, kindle refer README on how to fetch it
+2. COLUMNS          - Number of colums on given google sheet
+3. sheetPageNumber  - Google sheet Page Number, DEFAULT - 1
+
+NOTE: All input variables in BOLD are mandatory to fetch correct data
+*/
+
+export const vueGsheets = {
     created () {
       this.fetchData()
     },
     data: () => ({
-      SHEETPAGENUMBER: 1,
-      COLUMNS: 6,
-      records: null,
       items: [],
       headers: [],
-      YOURGOOGLESHEETCODE: '1FR9QOFhMZBG6GVcNTbBb3hc8wzG47t0-_BmZuzSBi8U'
+      records: null,
+      COLUMNS: 3,
+      sheetPageNumber: 1,
+      SHEETID: '1Yc2esnockqfrNweacmegXnavuPly8PvjaRzqlRzaXTE'
     }),
     computed: {
       getURL () {
         return 'https://spreadsheets.google.com/feeds/cells/' +
-        this.YOURGOOGLESHEETCODE + '/' + this.SHEETPAGENUMBER + '/public/full?alt=json'
+        this.SHEETID + '/' + this.sheetPageNumber + '/public/full?alt=json'
       }
     },
     methods: {
