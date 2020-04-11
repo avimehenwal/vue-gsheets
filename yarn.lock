@@ -7893,10 +7893,12 @@ vue-eslint-parser@^7.0.0:
     esquery "^1.0.1"
     lodash "^4.17.15"
 
-vue-gsheets@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/vue-gsheets/-/vue-gsheets-1.0.2.tgz#297a75c6e698c4ffd736bf57b948f107a987bcb3"
-  integrity sha512-3syVEpdlVxCfkwu0fCH9N2Z+oSXFKET14ddcsjhDmaTc+8qemc6ZEL/PHdwl7dZEBCqn+/L1Ime7+MXKSVfPsw==
+vue-gsheets@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-gsheets/-/vue-gsheets-2.0.0.tgz#62ec7ae5f9299573f685882d2f99ef2985504ee7"
+  integrity sha512-oJrQBYoZNVYMMIIleOYOD0AM+ct2oXyOVMy99cVQVZqb0P+Jvm0fMFO8MZVYfNOKXUvXdpQqBkFOk9n+WEJ8CQ==
+  dependencies:
+    axios "^0.19.2"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
