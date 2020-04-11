@@ -1,0 +1,30 @@
+{
+  "name": "vue-gsheets",
+  "version": "1.0.2",
+  "description": "Parse data from public google sheets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avimehenwal/vue-gsheets.git"
+  },
+  "keywords": [
+    "vuejs",
+    "vue",
+    "google-sheets",
+    "sheets",
+    "gsheet",
+    "spreadsheet",
+    "parser",
+    "nuxt",
+    "nuxtjs"
+  ],
+  "author": "avimehenwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avimehenwal/vue-gsheets/issues"
+  },
+  "homepage": "https://github.com/avimehenwal/vue-gsheets#readme"
+}
