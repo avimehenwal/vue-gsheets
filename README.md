@@ -1,3 +1,12 @@
+#### Table of Contents
+
+- [vue-gsheets](#vue-gsheets)
+  - [Installation](#installation)
+  - [Input Arguments](#input-arguments)
+  - [How to use in components](#how-to-use-in-components)
+  - [How to fetch SHEETID and sheetPageNumber from google sheet?](#how-to-fetch-sheetid-and-sheetpagenumber-from-google-sheet)
+  - [Other Information](#other-information)
+
 # vue-gsheets
 
 
@@ -45,11 +54,11 @@ npm install --save vue-gsheets
 ```
 
 
-### Input Arguments
+## Input Arguments
 
-Set following arguments in `data` of your vue componet
+Set following arguments in `data` of your vue component
 
-Argument | default | Description
+Arguments | default values | Description
 ---------|---------|-------------
 SHEETID         | 1Yc2esnockqfrNweacmegXnavuPly8PvjaRzqlRzaXTE | ID of google sheet, kindle refer README on how to fetch it
 COLUMNS         | 3 | Number of colums on given google sheet
@@ -61,8 +70,13 @@ NOTE: All input variables in BOLD are mandatory to fetch correct data
 ## How to use in components
 
 Add this module as a [mixin](https://vuejs.org/v2/guide/mixins.html) to the
-component which needs the data. Kindly update the `COLUMNS`, `sheetPageNumber`
-and `SHEETID` data values in component to correct values
+component or page which consumes data from published google sheet. Then update the `COLUMNS`, `sheetPageNumber`
+and `SHEETID` data values in component to correct values.
+
+Kindly refer this section [How to fetch SHEETID and sheetPageNumber from google sheet?](#how-to-fetch-sheetid-and-sheetpagenumber-from-google-sheet)
+to find out `SHEETID` and `sheetPageNumber` info from your google sheet.
+
+
 
 ```js
 <script>
@@ -101,7 +115,7 @@ A screenshot from `vue-devtools`
 
 ![vue-devtools](demo.png)
 
-### How to fetch SHEETID and sheetPageNumber from google sheet?
+## How to fetch SHEETID and sheetPageNumber from google sheet?
 
 Open the google sheet you want to import data from in your browser. Make sure its `published`
 (if not kindly do so, else this approach will not work).
@@ -118,7 +132,7 @@ https://docs.google.com/spreadsheets/d/1Yc2esnockqfrNweacmegXnavuPly8PvjaRzqlRza
 
 ---
 
-#### Other Information
+## Other Information
 
 * [Got a bug, kindly report it here](https://github.com/avimehenwal/vue-gsheets/issues)
 * [Let me know if you got a feature request, or support for other framework](https://github.com/avimehenwal/vue-gsheets/issues)
@@ -127,4 +141,7 @@ https://docs.google.com/spreadsheets/d/1Yc2esnockqfrNweacmegXnavuPly8PvjaRzqlRza
 * [NPM Package](https://www.npmjs.com/package/vue-gsheets)
 
 
+
 <a href="https://www.buymeacoffee.com/F1j07cV" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
+ Spread Love :hearts: and not :no_entry_sign: hatred   [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40cloudposse)](https://twitter.com/cloudposse)
