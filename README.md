@@ -1,8 +1,13 @@
+[![NPM Version][npm-image]][npm-url]
+[![Downloads Stats][npm-downloads]][npm-url]
+[![HitCount](http://hits.dwyl.com/avimehenwal/vue-sheets.svg)](http://hits.dwyl.com/avimehenwal/vue-sheets)
+
 - [vue-sheets](#vue-sheets)
   - [Installation](#installation)
-  - [Meta](#meta)
+  - [Meta Information](#meta-information)
   - [Contributing](#contributing)
   - [Issues](#issues)
+      - [Known Bugs](#known-bugs)
 
 # vue-sheets
 
@@ -10,13 +15,8 @@
 
 ![demo](demo.png)
 
-[Google sheet used in demo](https://docs.google.com/spreadsheets/d/e/2PACX-1vQLWDoEdzvcFi5lX34b6jnyzbYqymfNXJhP4O6Xzhjsobv7gt3vn40H3fVFUwPpy-hMx0ERLQbZZh08/pubhtml)
-
-[Live Demo](https://vue-sheets.netlify.com/)
-
-[![NPM Version][npm-image]][npm-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-[![HitCount](http://hits.dwyl.com/avimehenwal/vue-sheets.svg)](http://hits.dwyl.com/avimehenwal/vue-sheets)
+* [Google sheet used in demo](https://docs.google.com/spreadsheets/d/e/2PACX-1vQLWDoEdzvcFi5lX34b6jnyzbYqymfNXJhP4O6Xzhjsobv7gt3vn40H3fVFUwPpy-hMx0ERLQbZZh08/pubhtml)
+* [Live Demo](https://vue-sheets.netlify.com/)
 
 ## Installation
 
@@ -24,11 +24,10 @@
 yarn serve
 ```
 
-## Meta
+## Meta Information
 
-**NOTE:** [Got issues, kindly log them here ...](https://github.com/avimehenwal/vue-sheets/issues)
-
-avimehenwal – [@avimehenwal](https://twitter.com/avimehenwal)
+* [Got issues, kindly log them here ...](https://github.com/avimehenwal/vue-sheets/issues)
+* Say Hello - [@avimehenwal](https://twitter.com/avimehenwal)
 
 ## Contributing
 
@@ -45,8 +44,14 @@ avimehenwal – [@avimehenwal](https://twitter.com/avimehenwal)
 
 ## Issues
 
+[Issue Tracker](https://github.com/avimehenwal/vue-sheets/issues)
+
+#### Known Bugs
+
 * [Missing stack frames](https://github.com/nuxt/create-nuxt-app/issues/246)
 
-Spread Love <3
+
 
 <a href="https://www.buymeacoffee.com/F1j07cV" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
+ Spread Love :hearts: and not :no_entry_sign: hatred   [![Twitter Follow](https://img.shields.io/twitter/follow/avimehenwal.svg?style=social)](https://twitter.com/avimehenwal)
