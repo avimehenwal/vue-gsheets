@@ -1,6 +1,5 @@
 # vue-gsheets
 
-> works with [nuxt framework](https://nuxtjs.org/)
 
 Parses a public Google sheets spreadsheet if it follows a basic format of equally structured rows that start with a heading row.
 
@@ -34,7 +33,6 @@ will be parsed into the following JSON
 ]
 ```
 
-NOTE: only tested with [nuxt framework](https://nuxtjs.org/)
 
 ## Installation
 
@@ -91,6 +89,14 @@ Following data properties are added
 3. items   - array of objects with data fetched
 4. records - number of records, 3 in eg.
 
+```html
+<tr v-for="item in items" :key="item.dateStarted">
+   <td> {{ item.User }}        </td>
+   <td> {{ item.dateStarted }} </td>
+   <td> {{ item.Role }}        </td>
+</tr>
+```
+
 A screenshot from `vue-devtools`
 
 ![vue-devtools](demo.png)
@@ -117,7 +123,7 @@ https://docs.google.com/spreadsheets/d/1Yc2esnockqfrNweacmegXnavuPly8PvjaRzqlRza
 * [Got a bug, kindly report it here](https://github.com/avimehenwal/vue-gsheets/issues)
 * [Let me know if you got a feature request, or support for other framework](https://github.com/avimehenwal/vue-gsheets/issues)
 * Contact me for contributions via [twitter](https://twitter.com/avimehenwal)
-* [Test Repo](https://github.com/avimehenwal/nuxt-vue-gsheets)
+* [Test Repo](https://github.com/avimehenwal/vue-sheets)
 * [NPM Package](https://www.npmjs.com/package/vue-gsheets)
 
 

@@ -14,6 +14,8 @@ Mandatory Inputs Arguments
 NOTE: All input variables in BOLD are mandatory to fetch correct data
 */
 
+import axios from 'axios'
+
 export const vueGsheets = {
     created () {
       this.fetchData()
@@ -34,20 +36,25 @@ export const vueGsheets = {
     },
     methods: {
       async fetchData () {
-        const data = await this.$axios.$get(this.getURL)
-        const entry = data.feed.entry
-        this.records = (entry.length / this.COLUMNS) - 1
-        for (let i = 0; i < this.COLUMNS; i++) {
-          this.headers.push(entry[i].content.$t)
-        }
-        for (let i = this.headers.length; i < entry.length; i += this.COLUMNS) {
-          const item = {}
-          for (let j = 0; j < this.headers.length; j++) {
-          // entry[i].content.$t retrieves the content of each cell
-            item[this.headers[j]] = entry[i + j].content.$t
+        const data = await axios.get(this.getURL)
+        .then(response => {
+          const entry = response.data.feed.entry
+          this.records = (entry.length / this.COLUMNS) - 1
+          for (let i = 0; i < this.COLUMNS; i++) {
+            this.headers.push(entry[i].content.$t)
           }
-          this.items.push(item)
-        }
+          for (let i = this.headers.length; i < entry.length; i += this.COLUMNS) {
+            const item = {}
+            for (let j = 0; j < this.headers.length; j++) {
+            // entry[i].content.$t retrieves the content of each cell
+              item[this.headers[j]] = entry[i + j].content.$t
+            }
+            this.items.push(item)
+          }
+        })
+        .catch(error => {
+          console.log(error)
+        })
       }
     }
   }

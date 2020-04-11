@@ -1,7 +1,7 @@
 {
   "name": "vue-gsheets",
-  "version": "1.0.2",
-  "description": "Parse data from public google sheets",
+  "version": "1.1.0",
+  "description": "Transform data from published google sheets to usable vue items format",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,14 +17,15 @@
     "sheets",
     "gsheet",
     "spreadsheet",
-    "parser",
-    "nuxt",
-    "nuxtjs"
+    "parser"
   ],
   "author": "avimehenwal",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/avimehenwal/vue-gsheets/issues"
   },
-  "homepage": "https://github.com/avimehenwal/vue-gsheets#readme"
+  "homepage": "https://github.com/avimehenwal/vue-gsheets#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }
