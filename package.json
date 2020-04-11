@@ -1,6 +1,6 @@
 {
   "name": "vue-gsheets",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Parse data from public google sheets",
   "main": "index.js",
   "scripts": {
