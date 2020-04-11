@@ -1,4 +1,5 @@
-#### Table of Contents
+[![NPM Version][npm-image]][npm-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
 - [vue-gsheets](#vue-gsheets)
   - [Installation](#installation)
@@ -140,8 +141,13 @@ https://docs.google.com/spreadsheets/d/1Yc2esnockqfrNweacmegXnavuPly8PvjaRzqlRza
 * [Test Repo](https://github.com/avimehenwal/vue-sheets)
 * [NPM Package](https://www.npmjs.com/package/vue-gsheets)
 
+<!-- Markdown link & img dfn's -->
+[npm-url]: https://www.npmjs.com/package/vue-gsheets
+[npm-image]: https://img.shields.io/npm/v/vue-gsheets.svg?style=flat-square
+[npm-downloads]: https://img.shields.io/npm/dm/vue-gsheets.svg?style=flat-square
+
 
 
 <a href="https://www.buymeacoffee.com/F1j07cV" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
- Spread Love :hearts: and not :no_entry_sign: hatred   [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40cloudposse)](https://twitter.com/cloudposse)
+ Spread Love :hearts: and not :no_entry_sign: hatred   [![Twitter Follow](https://img.shields.io/twitter/follow/avimehenwal.svg?style=social)](https://twitter.com/avimehenwal)
