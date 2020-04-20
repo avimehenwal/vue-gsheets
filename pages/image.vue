@@ -1,13 +1,26 @@
 <template>
   <div>
-    {{ itemLength }}
     <v-row>
-      <v-col v-for="(item, index) in images" :key="item.pathLong" cols="12" md="4">
+      <v-chip color="warning" outlined>
+        {{ itemLength }}
+      </v-chip>
+      <v-spacer />
+      <v-text-field
+        v-model="search"
+        append-icon="mdi-magnify"
+        label="Filter images"
+        single-line
+        hide-details
+      />
+    </v-row>
+    <v-row>
+      <v-col v-for="(item, index) in filteredImages" :key="item.pathShort" cols="12" md="4">
         <v-card>
           <v-img
             class="white--text align-end"
-            lazy-src="https://picsum.photos/id/1011/100/60"
+            lazy-src="https://fakeimg.pl/100x100/?text=loading"
             :src="item.pathLong"
+            :alt="item.pathShort"
           >
             <v-card-title>
               <v-btn fab outlined color="white">
@@ -41,12 +54,18 @@ export default {
   },
   data () {
     return {
-      images: []
+      images: [],
+      search: '' // start with empty string and not null
     }
   },
   computed: {
     itemLength () {
-      return this.images.length
+      return this.filteredImages.length
+    },
+    filteredImages () {
+      return this.images.filter((imageObj) => {
+        return imageObj.pathShort.match(this.search)
+      })
     }
   },
   mounted () {
