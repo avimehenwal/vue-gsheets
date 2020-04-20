@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Button href="https://en.wikipedia.org/wiki/Attack_on_Titan" text="wiki page" />
+    <Button :href="wiki" text="wiki page" />
+    <Button :href="manga" text="Read Manga" />
     <Comments />
   </div>
 </template>
@@ -13,6 +14,10 @@ export default {
   components: {
     Button,
     Comments
-  }
+  },
+  data: () => ({
+    manga: 'https://ww2.attack-on-titan.com/',
+    wiki: 'https://en.wikipedia.org/wiki/Attack_on_Titan'
+  })
 }
 </script>

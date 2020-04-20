@@ -80,13 +80,6 @@
             Quarentine Anime List
           </v-toolbar-title>
           <v-spacer />
-          <!-- <v-text-field
-            v-model="search"
-            append-icon="mdi-magnify"
-            label="Search"
-            single-line
-            hide-details
-          /> -->
         </v-toolbar>
         <v-list two-line subheader>
           <v-list-item v-for="item in items" :key="item.TITLE" :href="item.TO">
