@@ -61,6 +61,7 @@ items_1 = 1 + [0..] table_total_columns
 ## Resources
 
 * https://www.grapecity.com/blogs/adding-excel-import-and-export-to-your-vue-app
+* https://stackoverflow.com/questions/44312494/how-to-create-per-workspace-snippets-in-vscode
 
 
 #### Get in touch with me
