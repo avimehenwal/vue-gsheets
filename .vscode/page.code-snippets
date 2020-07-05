@@ -1,0 +1,72 @@
+{
+	// Place your fan-gallery workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// },
+	"manga page snippet": {
+		"scope": "vue",
+		"prefix": "page",
+		"body": [
+		  "<template>",
+		  "  <div>",
+		  "    <h1>{{ title }}</h1><br>",
+		  "    <Button :href=\"wiki\" text=\"wiki page\" />",
+		  "    <Button :href=\"manga\" text=\"Read Manga\" />",
+		  "    <Button :href=\"fandom\" text=\"Fandome site\" />",
+		  "    <Button :href=\"bg\" text=\"Background Inspiration\" />",
+		  "    <Button :href=\"imdb\" text=\"IMDB\" />",
+		  "    <Button :href=\"news\" text=\"News\" />",
+		  "    <br><br>",
+		  "",
+		  "    <h3>Seasons and Movies</h3>",
+		  "    <div v-for=\"season in seasons\" :key=\"season\">",
+		  "      <Check :text=\"season.name\" :done=\"season.done\" />",
+		  "    </div>",
+		  "",
+		  "    <br><v-divider />",
+		  "    <Comments />",
+		  "  </div>",
+		  "</template>",
+		  "",
+		  "<script>",
+		  "import Button from '@/components/button.vue'",
+		  "import Comments from '@/components/Comments.vue'",
+		  "import Check from '@/components/Check.vue'",
+		  "",
+		  "export default {",
+		  "  components: {",
+		  "    Button,",
+		  "    Comments,",
+		  "    Check",
+		  "  },",
+		  "  data: () => ({",
+		  "    title: '${1:Some Title}',",
+		  "    wiki: '${2:Link}',",
+		  "    bg: '${3:Link}',",
+		  "    fandom: '${4:Link}',",
+		  "    imdb: '${5:Link}',",
+		  "    news: '${6:Link}',",
+		  "    manga: '${7:Link}',",
+		  "    seasons: [",
+		  "      { name: 'Vinland Saga: Season 1', done: true },",
+		  "    ]",
+		  "  })",
+		  "}",
+		  "</script>",
+		  ""
+		],
+		"description": "manga page snippet"
+	  }
+}

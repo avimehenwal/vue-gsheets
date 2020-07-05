@@ -23,7 +23,9 @@
             :alt="item.pathShort"
           >
             <v-card-title>
-              <v-btn fab outlined color="white"> {{ index }} </v-btn>
+              <v-btn fab outlined color="white">
+                {{ index }}
+              </v-btn>
             </v-card-title>
             <v-card-text> {{ item.pathShort }} </v-card-text>
           </v-img>

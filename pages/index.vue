@@ -1,11 +1,15 @@
 <template>
   <v-container>
+    <!-- # of items loaded panel -->
     <v-alert dense text outlined type="success">
       <strong> {{ records }} </strong> Records loaded ...
     </v-alert>
+
+    <!-- Grid card layout -->
     <div v-if="grid">
       <v-row>
         <v-col v-for="(item) in items" :key="item.TITLE" cols="12" :md="cards">
+          <!-- <v-card dark outlined hover :shaped="shaped"> -->
           <v-card dark outlined hover :shaped="shaped" :to="item.TO">
             <v-img
               :alt="item.TITLE"
@@ -50,6 +54,7 @@
         </v-col>
       </v-row>
 
+      <!-- Reactive card controls on UI -->
       <v-row>
         <v-col cols="12" xs="6" md="2">
           <v-switch v-model="shaped" dense label="Toggle shape" />
@@ -72,6 +77,7 @@
       </v-row>
     </div>
 
+    <!-- Listview layout -->
     <div v-else>
       <v-card class="mx-auto" max-width="1000">
         <v-toolbar color="indigo" dark>
@@ -119,6 +125,8 @@
         </v-list>
       </v-card>
     </div>
+
+    <!-- Comments component -->
     <v-divider />
     <Comments />
   </v-container>
@@ -140,7 +148,7 @@ export default {
     large: false,
     grid: true,
     numCards: 4,
-    numCardsValues: [1, 2, 3, 4, 6],
+    numCardsValues: [1, 2, 3, 4, 5, 6],
     search: ''
   }),
   computed: {

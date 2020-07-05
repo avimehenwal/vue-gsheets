@@ -139,6 +139,11 @@ export default {
           to: '/mha'
         },
         {
+          icon: 'mdi-search-web',
+          title: 'Resources',
+          to: '/resources'
+        },
+        {
           icon: 'mdi-format-list-bulleted-square',
           title: 'Test',
           to: '/test'
