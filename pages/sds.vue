@@ -14,9 +14,16 @@
       <div v-else>
         <Check :text="season" />
       </div>
-    </div>
+    </div><br>
 
-    <br><v-divider />
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/3X_TC0m6kJQ"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen />
+    <br><br><v-divider /><br>
     <Comments />
   </div>
 </template>

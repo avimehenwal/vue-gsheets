@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>{{ title }}</h1><br>
+    <h1>{{ title }}</h1>
+    <br />
 
     <Button :href="wiki" text="wiki page" />
     <Button :href="manga" text="Read Manga" />
@@ -8,16 +9,29 @@
     <Button :href="bg" text="Background Inspiration" />
     <Button :href="imdb" text="IMDB" />
     <Button :href="news" text="News" />
-    <br><br>
+    <br />
+    <br />
 
     <h3>Seasons and Movies</h3>
     <div v-for="season in seasons" :key="season">
       <Check :text="season.name" :done="season.done" />
     </div>
 
-    
+    <br />
+    <ol>
+      <li>Whoever dies heredies in vain, I will give you a reason worth dying</li>
+    </ol>
 
-    <br><v-divider />
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/4PqQAqrVvdo"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen/>
+
+    <br />
+    <v-divider />
     <Comments />
   </div>
 </template>
