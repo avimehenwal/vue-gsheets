@@ -1,6 +1,5 @@
 <template>
   <v-container>
-
     <!-- # of items loaded panel -->
     <v-alert dense text outlined type="success">
       <strong> {{ records }} </strong> Records loaded ...
@@ -12,7 +11,6 @@
         <v-col v-for="(item) in items" :key="item.TITLE" cols="12" :md="cards">
           <!-- <v-card dark outlined hover :shaped="shaped"> -->
           <v-card dark outlined hover :shaped="shaped" :to="item.TO">
-
             <v-img
               :alt="item.TITLE"
               :src="item.IMAGE"
@@ -56,7 +54,7 @@
         </v-col>
       </v-row>
 
-    <!-- Reactive card controls on UI -->
+      <!-- Reactive card controls on UI -->
       <v-row>
         <v-col cols="12" xs="6" md="2">
           <v-switch v-model="shaped" dense label="Toggle shape" />
