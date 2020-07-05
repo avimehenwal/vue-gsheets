@@ -22,7 +22,8 @@
       src="https://www.youtube.com/embed/3X_TC0m6kJQ"
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen />
+      allowfullscreen
+    />
     <br><br><v-divider /><br>
     <Comments />
   </div>

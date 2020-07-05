@@ -50,7 +50,7 @@ export default {
     }
   },
   gtm: {
-    id: process.env.GTM_ID || '',
+    id: process.env.GTM_ID || ''
   },
   /*
   ** Nuxt.js modules

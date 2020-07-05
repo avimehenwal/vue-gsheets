@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h1>{{ title }}</h1> <br />
+    <h1>{{ title }}</h1> <br>
 
     <v-card class="mx-auto" max-width="100%" tile>
       <div v-for="item in resources" :key="item">
@@ -16,8 +16,7 @@
       </div>
     </v-card>
 
-    <br />
-    <v-divider />
+    <br> <v-divider />
     <Comments />
   </v-container>
 </template>
