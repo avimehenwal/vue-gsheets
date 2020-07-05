@@ -29,6 +29,7 @@
 * https://www.gamevix.com/games/browse/best-rated
 * [ ] Add character details
 * [ ] Add data transform Mixin
+* [ ] Pass information from index page to description page using URL
 
 ## Learning
 
