@@ -24,7 +24,6 @@
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     />
-    <br><br><v-divider /><br>
     <Comments />
   </div>
 </template>

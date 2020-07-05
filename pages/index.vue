@@ -127,7 +127,6 @@
     </div>
 
     <!-- Comments component -->
-    <v-divider />
     <Comments />
   </v-container>
 </template>
