@@ -14,7 +14,7 @@
             <v-img
               :alt="item.TITLE"
               :src="item.IMAGE"
-              lazy-src="https://picsum.photos/id/1011/100/60"
+              lazy-src="/placeholder.svg"
               aspect-ratio="1"
             />
             <v-card-title :href="item.EXTERNAL">
