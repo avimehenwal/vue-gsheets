@@ -1,5 +1,6 @@
 <template>
-  <div> <br>
+  <div>
+    <br>
     <v-card class="mx-auto" max-width="100%" tile>
       <div v-for="item in items" :key="item">
         <v-list-item>

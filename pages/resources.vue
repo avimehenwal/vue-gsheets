@@ -16,7 +16,6 @@
       </div>
     </v-card>
 
-    <br> <v-divider />
     <Comments />
   </v-container>
 </template>

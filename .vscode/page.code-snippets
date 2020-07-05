@@ -35,7 +35,6 @@
 		  "      <Check :text=\"season.name\" :done=\"season.done\" />",
 		  "    </div>",
 		  "",
-		  "    <br><v-divider />",
 		  "    <Comments />",
 		  "  </div>",
 		  "</template>",

@@ -10,7 +10,6 @@
     <Check text="Season 3 Part 1" />
     <Check text="Season 3 Part 2" />
 
-    <br><v-divider />
     <Comments />
   </div>
 </template>

@@ -15,7 +15,6 @@
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
-    <v-divider />
     <Comments />
   </v-container>
 </template>

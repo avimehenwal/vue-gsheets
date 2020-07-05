@@ -32,7 +32,6 @@
     />
 
     <br>
-    <v-divider />
     <Comments />
   </div>
 </template>

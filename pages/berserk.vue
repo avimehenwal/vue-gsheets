@@ -20,7 +20,6 @@
 
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTpOoiNI5uFEJZrn-4feLhH1Vo8_AZ9uZzbE7IMhr8BDlNXHGjRPG_4tM7FH_xZYH2seo4Q1NNT1mDE/pubhtml?widget=true&amp;headers=false" />
 
-    <br><v-divider />
     <Comments />
   </div>
 </template>
