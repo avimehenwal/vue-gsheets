@@ -134,10 +134,12 @@
 <script>
 import { sheetMixin } from '@/Mixins.js'
 import Comments from '@/components/Comments.vue'
+// import Card from '@/components/Card.vue'
 
 export default {
   components: {
     Comments
+    // Card
   },
   mixins: [sheetMixin],
   data: () => ({
