@@ -38,11 +38,11 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify',
     '@nuxtjs/google-analytics',
-    '@nuxtjs/gtm',
-    '@nuxt/components'
+    '@nuxtjs/eslint-module',
+    '@nuxt/components',
+    '@nuxtjs/vuetify',
+    '@nuxtjs/gtm'
   ],
   googleAnalytics: {
     id: process.env.GA_ID || '',

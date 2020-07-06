@@ -1,5 +1,7 @@
 <template>
-  <h3>Hello World</h3>
+  <NuxtLink to="/article">
+    Link to Article
+  </NuxtLink>
 </template>
 
 <script>
