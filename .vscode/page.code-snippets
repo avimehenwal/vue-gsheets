@@ -31,7 +31,7 @@
 		  "    <br><br>",
 		  "",
 		  "    <h3>Seasons and Movies</h3>",
-		  "    <div v-for=\"season in seasons\" :key=\"season\">",
+		  "    <div v-for=\"season in seasons\" :key=\"season.text\">",
 		  "      <Check :text=\"season.name\" :done=\"season.done\" />",
 		  "    </div>",
 		  "",

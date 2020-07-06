@@ -13,7 +13,7 @@
     </header>
 
     <h3>Seasons and Movies</h3>
-    <div v-for="season in seasons" :key="season">
+    <div v-for="season in seasons" :key="season.text">
       <Check :text="season.name" :done="season.done" />
     </div>
     <List :items="items" />
@@ -46,10 +46,11 @@
       <v-list-item>
         Mercaneries Iron clad rule | Skull Knight | Sign of sacrifise
       </v-list-item>
-    </v-list>
+    </v-list><br>
 
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTpOoiNI5uFEJZrn-4feLhH1Vo8_AZ9uZzbE7IMhr8BDlNXHGjRPG_4tM7FH_xZYH2seo4Q1NNT1mDE/pubhtml?widget=true&amp;headers=false" />
-    <iframe src="https://www.youtube.com/embed/yJafSOtQaOo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" />
+    <iframe src="https://www.youtube.com/embed/yJafSOtQaOo" />
+
     <Comments />
   </div>
 </template>

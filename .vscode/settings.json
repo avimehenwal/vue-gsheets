@@ -18,6 +18,7 @@
         "release",
         "vscode",
         "view",
-        "page"
+        "page",
+        "vue"
     ]
 }

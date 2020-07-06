@@ -2,7 +2,7 @@
   <div>
     <br>
     <v-card class="mx-auto" max-width="100%" tile>
-      <div v-for="item in items" :key="item">
+      <div v-for="item in items" :key="item.text">
         <v-list-item>
           <v-list-item-content>
             <v-list-item-title>
