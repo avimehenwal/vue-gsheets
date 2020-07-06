@@ -15,21 +15,27 @@
     </v-row>
     <v-row>
       <v-col v-for="(item, index) in filteredImages" :key="item.pathShort" cols="12" md="4">
-        <v-card>
-          <v-img
-            class="white--text align-end"
-            lazy-src="https://fakeimg.pl/100x100/?text=loading"
-            :src="item.pathLong"
-            :alt="item.pathShort"
-          >
-            <v-card-title>
-              <v-btn fab outlined color="white">
-                {{ index }}
-              </v-btn>
-            </v-card-title>
-            <v-card-text> {{ item.pathShort }} </v-card-text>
-          </v-img>
-        </v-card>
+        <v-skeleton-loader
+          :loading="loading"
+          :transition="transition"
+          type="article"
+        >
+          <v-card>
+            <v-img
+              class="white--text align-end"
+              lazy-src="/placeholder.svg"
+              :src="item.pathLong"
+              :alt="item.pathShort"
+            >
+              <v-card-title>
+                <v-btn fab outlined color="white">
+                  {{ index }}
+                </v-btn>
+              </v-card-title>
+              <v-card-text> {{ item.pathShort }} </v-card-text>
+            </v-img>
+          </v-card>
+        </v-skeleton-loader>
       </v-col>
     </v-row>
 
@@ -56,7 +62,9 @@ export default {
   data () {
     return {
       images: [],
-      search: '' // start with empty string and not null
+      search: '',
+      loading: true,
+      transition: 'fade-transition'
     }
   },
   computed: {
@@ -70,10 +78,17 @@ export default {
     }
   },
   mounted () {
-    // use webpack to collect files
-    this.importAll(require.context('@/assets/images/', true, /\.png$/))
+    this.wait()
   },
   methods: {
+    wait () {
+      setTimeout(this.stop_loading, 2500)
+    },
+    stop_loading () {
+      this.loading = false
+      // use webpack to collect files
+      this.importAll(require.context('@/assets/images/', true, /\.png$/))
+    },
     importAll (r) {
       r.keys().forEach(key => (this.images.push({ pathLong: r(key), pathShort: key })))
     }

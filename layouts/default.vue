@@ -71,10 +71,10 @@
       >
         <v-icon>mdi-minus</v-icon>
       </v-btn>
-      <v-spacer />
       <nuxt-link to="/">
         <v-toolbar-title v-text="title" />
       </nuxt-link>
+      <v-spacer />
       <NewLogo />
 
       <!-- <v-btn icon @click.stop="rightDrawer = !rightDrawer" >
