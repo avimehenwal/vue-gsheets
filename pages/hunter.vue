@@ -3,7 +3,7 @@
     <h1>{{ title }}</h1><br>
     <Button :href="wiki" text="wiki page" />
     <Button :href="manga" text="Read Manga" />
-    <Button :href="fandom" text="Fandome site" />
+    <Button :href="fandom" text="Fandom site" />
     <Button :href="bg" text="Background Inspiration" />
     <Button :href="imdb" text="IMDB" />
     <Button :href="news" text="News" />
@@ -13,21 +13,6 @@
     <div v-for="season in seasons" :key="season.text">
       <Check :text="season.name" :done="season.done" />
     </div>
-
-    <v-btn class="mx-12 my-4" @click="loading = !loading">
-      Toggle
-    </v-btn>
-    <v-skeleton-loader
-      :loading="loading"
-      :transition="transition"
-      height="94"
-      type="list-item-two-line"
-    >
-      <v-card>
-        <v-card-title>Title</v-card-title>
-        <v-card-text>Card Text</v-card-text>
-      </v-card>
-    </v-skeleton-loader>
 
     <!-- <Comments /> -->
   </div>
