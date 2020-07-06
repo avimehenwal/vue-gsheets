@@ -2,6 +2,7 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   mode: 'universal',
+  components: true,
   /*
   ** Headers of the page
   */
@@ -40,7 +41,8 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
     '@nuxtjs/google-analytics',
-    '@nuxtjs/gtm'
+    '@nuxtjs/gtm',
+    '@nuxt/components'
   ],
   googleAnalytics: {
     id: process.env.GA_ID || '',

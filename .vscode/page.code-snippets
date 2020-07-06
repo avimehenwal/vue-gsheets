@@ -49,7 +49,7 @@
 		  "  components: {",
 		  "    Button,",
 		  "    Comments,",
-		  "    Check",
+		  "    Check,",
 		  "    List",
 		  "  },",
 		  "  data: () => ({",
