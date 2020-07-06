@@ -1,8 +1,15 @@
 <template>
   <div>
     <v-row>
-      <v-col v-for="(item) in 12" :key="item" cols="3" :md="cards">
-        <Card />
+      <v-col v-for="item in items" :key="item.TITLE" cols="3">
+        <Card
+          :image="item.IMAGE"
+          :href="item.EXTERNAL"
+          :title="item.TITLE"
+          :desc="item.SUBTITLE"
+          :rating="item.RATING"
+          :to="item.TO"
+        />
       </v-col>
     </v-row>
 
@@ -52,12 +59,22 @@
 
 <script>
 import Card from '@/components/Card.vue'
+import { sheetMixin } from '@/Mixins.js'
 
 export default {
   components: {
     Card
   },
+  mixins: [sheetMixin],
   data: () => ({
+    SHEETPAGENUMBER: 3,
+    COLUMNS: 6,
+    shaped: false,
+    large: false,
+    grid: true,
+    numCards: 4,
+    numCardsValues: [1, 2, 3, 4, 5, 6],
+    search: '',
     valid: true,
     name: '',
     nameRules: [

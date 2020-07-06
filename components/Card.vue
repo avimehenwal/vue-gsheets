@@ -1,21 +1,52 @@
 <template>
   <div>
-    <v-btn class="mx-12 my-4" @click="loading = !loading">
+    <!-- <v-btn class="mx-12 my-4" @click="loading = !loading">
       Toggle
-    </v-btn>
-
+    </v-btn> -->
     <v-skeleton-loader
       :loading="loading"
       :transition="transition"
       type="article"
     >
-      <v-card>
-        <v-img src="/placeholder.svg" />
-        <v-card-title>Title</v-card-title>
-        <v-card-subtitle>Sub title</v-card-subtitle>
+      <v-card :href="to" dark outlined hover :shaped="shaped">
+        <!-- image  lazy-src="/placeholder.svg" not needed here -->
+        <v-img
+          lazy-src="/placeholder.svg"
+          aspect-ratio="1"
+          :alt="title"
+          :src="image"
+        />
+        <v-card-title>
+          {{ title }}
+        </v-card-title>
+        <v-card-subtitle>
+          {{ desc }}
+          <span v-if="to != '/'">
+            <v-icon class="float-right" small color="success darken-1">
+              mdi-circle
+            </v-icon>
+          </span>
+        </v-card-subtitle>
         <v-card-text>Card Text</v-card-text>
         <v-card-actions>
-          <v-btn>btn 1</v-btn><v-btn>btn 2</v-btn>
+          <v-rating
+            class="text-center"
+            color="warning"
+            background-color="grey darken-1"
+            half-increments
+            readonly
+            :large="large"
+            :value="Number(rating)"
+          />
+          <v-btn
+            class="float-right"
+            icon
+            color="warning"
+            :href="href"
+            target="_blank"
+          >
+            <v-icon>mdi-open-in-new</v-icon>
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-skeleton-loader>
@@ -25,6 +56,40 @@
 <script>
 export default {
   name: 'Card',
+  props: {
+    image: {
+      type: String,
+      default: 'url'
+    },
+    href: {
+      type: String,
+      default: '/'
+    },
+    to: {
+      type: String,
+      default: '/'
+    },
+    title: {
+      type: String,
+      default: 'Avi M'
+    },
+    desc: {
+      type: String,
+      default: 'bla bla bla'
+    },
+    rating: {
+      type: String,
+      default: '1'
+    },
+    large: {
+      type: Boolean,
+      default: false
+    },
+    shaped: {
+      type: Boolean,
+      default: false
+    }
+  },
   data: () => ({
     loading: true,
     transition: 'fade-transition'
@@ -34,7 +99,7 @@ export default {
   },
   methods: {
     wait () {
-      setTimeout(this.stop_loading, 2000)
+      setTimeout(this.stop_loading, 2500)
     },
     stop_loading () {
       this.loading = false

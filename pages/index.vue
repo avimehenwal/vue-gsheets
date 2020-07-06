@@ -9,48 +9,16 @@
     <div v-if="grid">
       <v-row>
         <v-col v-for="(item) in items" :key="item.TITLE" cols="12" :md="cards">
-          <!-- <v-card dark outlined hover :shaped="shaped"> -->
-          <v-card dark outlined hover :shaped="shaped" :to="item.TO">
-            <v-img
-              :alt="item.TITLE"
-              :src="item.IMAGE"
-              lazy-src="/placeholder.svg"
-              aspect-ratio="1"
-            />
-            <v-card-title :href="item.EXTERNAL">
-              {{ item.TITLE }}
-            </v-card-title>
-            <v-card-subtitle>
-              {{ item.SUBTITLE }}
-              <span v-if="item.TO != '/'">
-                <v-icon class="float-right" small color="success darken-1">
-                  mdi-circle
-                </v-icon>
-              </span>
-            </v-card-subtitle>
-            <client-only placeholder="Loading...">
-              <v-card-actions>
-                <v-rating
-                  class="text-center"
-                  color="warning"
-                  background-color="grey darken-1"
-                  half-increments
-                  readonly
-                  :large="large"
-                  :value="Number(item.RATING)"
-                />
-                <v-btn
-                  class="float-right"
-                  icon
-                  color="warning"
-                  :href="item.EXTERNAL"
-                  target="_blank"
-                >
-                  <v-icon>mdi-open-in-new</v-icon>
-                </v-btn>
-              </v-card-actions>
-            </client-only>
-          </v-card>
+          <Card
+            :image="item.IMAGE"
+            :href="item.EXTERNAL"
+            :title="item.TITLE"
+            :desc="item.SUBTITLE"
+            :rating="item.RATING"
+            :to="item.TO"
+            :large="large"
+            :shaped="shaped"
+          />
         </v-col>
       </v-row>
 
@@ -134,12 +102,12 @@
 <script>
 import { sheetMixin } from '@/Mixins.js'
 import Comments from '@/components/Comments.vue'
-// import Card from '@/components/Card.vue'
+import Card from '@/components/Card.vue'
 
 export default {
   components: {
-    Comments
-    // Card
+    Comments,
+    Card
   },
   mixins: [sheetMixin],
   data: () => ({
