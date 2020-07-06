@@ -26,6 +26,7 @@
 * [x] Add anime list
 * [x] Add manga details
 * [x] Add google analytics
+* [x] Card and image skeleton placeholders for upcoming content
 * https://www.gamevix.com/games/browse/best-rated
 * [ ] Add character details
 * [ ] Add data transform Mixin

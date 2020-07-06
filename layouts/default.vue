@@ -72,8 +72,11 @@
         <v-icon>mdi-minus</v-icon>
       </v-btn>
       <v-spacer />
-      <v-toolbar-title v-text="title" />
+      <nuxt-link to="/">
+        <v-toolbar-title v-text="title" />
+      </nuxt-link>
       <NewLogo />
+
       <!-- <v-btn icon @click.stop="rightDrawer = !rightDrawer" >
         <v-icon>mdi-menu</v-icon>
       </v-btn> -->

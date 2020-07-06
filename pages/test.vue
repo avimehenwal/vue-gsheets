@@ -1,50 +1,80 @@
 <template>
-  <v-form ref="form" v-model="valid" lazy-validation>
-    <v-text-field
-      v-model="name"
-      :counter="10"
-      :rules="nameRules"
-      label="Name"
-      required
-    />
+  <div>
+    <v-row>
+      <v-col v-for="item in items" :key="item.TITLE" cols="3">
+        <Card
+          :image="item.IMAGE"
+          :href="item.EXTERNAL"
+          :title="item.TITLE"
+          :desc="item.SUBTITLE"
+          :rating="item.RATING"
+          :to="item.TO"
+        />
+      </v-col>
+    </v-row>
 
-    <v-text-field
-      v-model="email"
-      :rules="emailRules"
-      label="E-mail"
-      required
-    />
+    <v-form ref="form" v-model="valid" lazy-validation>
+      <v-text-field
+        v-model="name"
+        :counter="10"
+        :rules="nameRules"
+        label="Name"
+        required
+      />
 
-    <v-select
-      v-model="select"
-      :items="items"
-      :rules="[v => !!v || 'Item is required']"
-      label="Item"
-      required
-    />
+      <v-text-field
+        v-model="email"
+        :rules="emailRules"
+        label="E-mail"
+        required
+      />
 
-    <v-checkbox
-      v-model="checkbox"
-      :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
-      required
-    />
+      <v-select
+        v-model="select"
+        :items="items"
+        :rules="[v => !!v || 'Item is required']"
+        label="Item"
+        required
+      />
 
-    <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
-      Validate
-    </v-btn>
-    <v-btn color="error" class="mr-4" @click="reset">
-      Reset Form
-    </v-btn>
-    <v-btn color="warning" @click="resetValidation">
-      Reset Validation
-    </v-btn>
-  </v-form>
+      <v-checkbox
+        v-model="checkbox"
+        :rules="[v => !!v || 'You must agree to continue!']"
+        label="Do you agree?"
+        required
+      />
+
+      <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
+        Validate
+      </v-btn>
+      <v-btn color="error" class="mr-4" @click="reset">
+        Reset Form
+      </v-btn>
+      <v-btn color="warning" @click="resetValidation">
+        Reset Validation
+      </v-btn>
+    </v-form>
+  </div>
 </template>
 
 <script>
+import Card from '@/components/Card.vue'
+import { sheetMixin } from '@/Mixins.js'
+
 export default {
+  components: {
+    Card
+  },
+  mixins: [sheetMixin],
   data: () => ({
+    SHEETPAGENUMBER: 3,
+    COLUMNS: 6,
+    shaped: false,
+    large: false,
+    grid: true,
+    numCards: 4,
+    numCardsValues: [1, 2, 3, 4, 5, 6],
+    search: '',
     valid: true,
     name: '',
     nameRules: [

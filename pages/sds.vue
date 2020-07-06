@@ -2,7 +2,7 @@
   <div>
     <Button :href="wiki" text="wiki page" />
     <Button :href="manga" text="Read Manga" />
-    <Button :href="fandom" text="Fandome site" />
+    <Button :href="fandom" text="Fandom site" />
     <Button :href="bg" text="Background Inspiration" />
     <br><br>
 
