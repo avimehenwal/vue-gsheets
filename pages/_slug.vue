@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <h1>Hello MD</h1>
-    <nuxt-content :document="doc" />
-  </div>
+  <nuxt-content :document="doc" />
 </template>
 
 <script>

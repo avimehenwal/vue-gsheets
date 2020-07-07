@@ -7,6 +7,9 @@
     <Button :href="bg" text="Background Inspiration" />
     <Button :href="imdb" text="IMDB" />
     <Button :href="news" text="News" />
+    <NuxtLink to="/deamonslayer">
+      Demon Slayer: Kimetsu no Yaiba
+    </NuxtLink>
     <br><br>
 
     <h3>Seasons and Movies</h3>
