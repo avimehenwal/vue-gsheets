@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Hello />
     <v-row>
       <v-col v-for="item in items" :key="item.TITLE" cols="3">
         <Card

@@ -28,6 +28,10 @@
 * [x] Add google analytics
 * [x] Card and image skeleton placeholders for upcoming content
 * https://www.gamevix.com/games/browse/best-rated
+* [x] Use @nuxt/Components
+  * No need anymore to manually import them in the script section
+* [ ] Use @nuxt/Content
+  * write in a `content/` directory
 * [ ] Add character details
 * [ ] Add data transform Mixin
 * [ ] Pass information from index page to description page using URL
@@ -39,6 +43,11 @@
 * Google blocks CORS requests
   * Who can access what resource from whome
 
+```
+# Update yarn packages
+yarn upgrade nuxt@^2.13.3
+yarn outdated
+```
 
 ## Issues
 
