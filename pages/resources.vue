@@ -45,6 +45,14 @@ export default {
       {
         text: 'List of Japanese manga magazines by circulation',
         link: 'https://en.wikipedia.org/wiki/List_of_Japanese_manga_magazines_by_circulation'
+      },
+      {
+        text: 'Tapas: Publish your own comics',
+        link: 'https://tapas.io/about'
+      },
+      {
+        text: 'Webtoons',
+        link: 'https://www.webtoons.com/en/creators101/getstarted'
       }
     ]
   })
