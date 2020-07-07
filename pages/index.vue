@@ -1,9 +1,19 @@
 <template>
   <v-container>
     <!-- # of items loaded panel -->
-    <v-alert dense text outlined type="success">
-      <strong> {{ records }} </strong> Records loaded ...
-    </v-alert>
+    <v-row>
+      <v-alert dense text outlined type="success">
+        <strong> {{ records }} </strong> Records loaded ...
+      </v-alert>
+      <v-spacer />
+      <v-text-field
+        v-model="search"
+        append-icon="mdi-magnify"
+        label="Filter Cards"
+        single-line
+        hide-details
+      />
+    </v-row>
 
     <!-- Grid card layout -->
     <div v-if="grid">
@@ -121,10 +131,13 @@ export default {
     search: ''
   }),
   computed: {
-    // ToDO: Add filtered search to list
-    filteredList () {
-      return this.title.filter((post) => {
-        return post.title.toLowerCase().includes(this.search.toLowerCase())
+    itemsLength () {
+      return this.filteredCards.length
+    },
+    filteredCards () {
+      // TypeError: Cannot read property 'match' of undefined
+      return this.items.filter((imageObj) => {
+        return imageObj.pathShort.match(this.search)
       })
     },
     cards () {
