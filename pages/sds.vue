@@ -4,6 +4,9 @@
     <Button :href="manga" text="Read Manga" />
     <Button :href="fandom" text="Fandom site" />
     <Button :href="bg" text="Background Inspiration" />
+    <nuxt-link to="/sevendeadlysins">
+      Seven Deaadly Sins
+    </nuxt-link>
     <br><br>
 
     <h3>Seasons and Movies</h3>
