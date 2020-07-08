@@ -21,6 +21,7 @@
         "page",
         "vue",
         "typo",
-        "search"
+        "search",
+        "chart"
     ]
 }
