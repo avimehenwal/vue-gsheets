@@ -7,6 +7,7 @@
 ## Demo
 
 ![Demo homepage](/demo/Screenshot_20200409_183322.png)
+![Dashboard View](/demo/dashboard-view.png)
 ![Google Tag Manager](/demo/Screenshot_20200410_004900.png)
 ---
 
@@ -29,12 +30,16 @@
 * [x] Card and image skeleton placeholders for upcoming content
 * https://www.gamevix.com/games/browse/best-rated
 * [x] Use @nuxt/Components
+* [x] Use [chart.js](https://github.com/chartjs/Chart.js/releases/tag/v2.9.3)
   * No need anymore to manually import them in the script section
 * [ ] Use @nuxt/Content
   * write in a `content/` directory
 * [ ] Add character details
 * [ ] Add data transform Mixin
 * [ ] Pass information from index page to description page using URL
+
+![charjs demo](/demo/chartjs.png)
+![Doughnut chartjs](/demo/doughnut-chart.png)
 
 ## Learning
 

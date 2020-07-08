@@ -15,10 +15,13 @@
   "dependencies": {
     "@nuxt/components": "^1.0.7",
     "@nuxt/content": "^1.4.1",
+    "@nuxt/http": "^0.5.7",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/gtm": "^2.2.3",
+    "chart.js": "^2.9.3",
     "moment": "^2.24.0",
-    "nuxt": "^2.13.3"
+    "nuxt": "^2.13.3",
+    "vue-chartjs": "^3.5.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",

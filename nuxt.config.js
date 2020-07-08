@@ -32,6 +32,10 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    // file do not exists
+    // {
+    //   src: '~/plugins/vue-chart.js', mode: 'client'
+    // }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -60,7 +64,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxt/http'
   ],
   /*
   ** Axios module configuration
@@ -101,5 +106,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  env: {
+    githubToken: '42cdf9fd55abf41d24f34c0f8a4d9ada5f9e9b93'
   }
 }
