@@ -32,6 +32,10 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    // file do not exists
+    // {
+    //   src: '~/plugins/vue-chart.js', mode: 'client'
+    // }
   ],
   /*
   ** Nuxt.js dev-modules

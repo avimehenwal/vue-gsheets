@@ -1,15 +1,19 @@
 <template>
   <div>
     <v-row>
-      <v-card width="30%">
+      <v-card width="29%" outlined>
         <v-card-title>
-          Contributor(s)
+          Project contributor(s)
         </v-card-title>
+        <v-card-subtitle>
+          Number of people contributing to the project, with the volume of contributions
+        </v-card-subtitle>
         <v-card-text>
           <DoughnutChart :data="doughnutChartData" :options="{ legend: { display: false }, maintainAspectRatio: false }" />
         </v-card-text>
       </v-card>
-      <v-card width="70%">
+      <v-spacer/>
+      <v-card width="70%" outlined right>
         <v-card-title>
           Commit Activity
         </v-card-title>
