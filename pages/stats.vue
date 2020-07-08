@@ -1,6 +1,52 @@
 <template>
   <div>
     <v-row>
+      <v-card width="20%" color="light-blue darken-4">
+        <v-card-text>
+          <div class="display-4 text-center white--text font-weight-regular">
+            {{ ghUser.public_repos }}
+          </div>
+        </v-card-text>
+        <v-card-subtitle class="text-center font-weight-bold">
+          Public Repositories
+        </v-card-subtitle>
+      </v-card>
+      <v-spacer />
+      <v-card width="20%">
+        <v-card-text>
+          <div class="display-4 text-center blue--text text--lighten-3">
+            {{ ghUser.public_gists }}
+          </div>
+        </v-card-text>
+        <v-card-subtitle class="text-center font-weight-bold">
+          Public Gists
+        </v-card-subtitle>
+      </v-card>
+      <v-spacer />
+      <v-card width="20%">
+        <v-card-text>
+          <div class="display-4 text-center red--text text--lighten-3">
+            {{ ghUser.followers }}
+          </div>
+        </v-card-text>
+        <v-card-subtitle class="text-center font-weight-bold">
+          Githhub Followers
+        </v-card-subtitle>
+      </v-card>
+      <v-spacer />
+      <v-card width="20%">
+        <v-card-text>
+          <div class="display-4 text-center green--text text--lighten-3">
+            {{ ghUser.following }}
+          </div>
+        </v-card-text>
+        <v-card-subtitle class="text-center font-weight-bold">
+          Github Following
+        </v-card-subtitle>
+      </v-card>
+    </v-row>
+    <br>
+    <v-row>
       <v-card width="29%" outlined>
         <v-card-title>
           Project contributor(s)
@@ -12,7 +58,7 @@
           <DoughnutChart :data="doughnutChartData" :options="{ legend: { display: false }, maintainAspectRatio: false }" />
         </v-card-text>
       </v-card>
-      <v-spacer/>
+      <v-spacer />
       <v-card width="70%" outlined right>
         <v-card-title>
           Commit Activity
@@ -59,6 +105,7 @@ export default {
         Authorization: `token ${env.githubToken}`
       }
     })
+    const ghUser = await $http.$get('https://api.github.com/users/avimehenwal')
     contributors = contributors.filter(c => c.contributions >= 10 && !isBot(c.login))
     return {
       barChartData: {
@@ -80,7 +127,8 @@ export default {
             data: contributors.map(c => c.contributions)
           }
         ]
-      }
+      },
+      ghUser
     }
   }
 }
