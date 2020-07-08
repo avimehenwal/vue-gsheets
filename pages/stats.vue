@@ -3,7 +3,7 @@
     <v-row>
       <v-card width="20%" color="light-blue darken-4">
         <v-card-text>
-          <div class="display-4 text-center white--text font-weight-regular">
+          <div class="display-4 text-center grey--text text--lighten-4 font-weight-regular">
             {{ ghUser.public_repos }}
           </div>
         </v-card-text>
@@ -12,7 +12,7 @@
         </v-card-subtitle>
       </v-card>
       <v-spacer />
-      <v-card width="20%">
+      <v-card width="20%" outlined>
         <v-card-text>
           <div class="display-4 text-center blue--text text--lighten-3">
             {{ ghUser.public_gists }}
@@ -23,7 +23,7 @@
         </v-card-subtitle>
       </v-card>
       <v-spacer />
-      <v-card width="20%">
+      <v-card width="20%" outlined>
         <v-card-text>
           <div class="display-4 text-center red--text text--lighten-3">
             {{ ghUser.followers }}
@@ -34,7 +34,7 @@
         </v-card-subtitle>
       </v-card>
       <v-spacer />
-      <v-card width="20%">
+      <v-card width="20%" outlined>
         <v-card-text>
           <div class="display-4 text-center green--text text--lighten-3">
             {{ ghUser.following }}
