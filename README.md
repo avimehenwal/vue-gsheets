@@ -38,6 +38,7 @@
 * [ ] Pass information from index page to description page using URL
 
 ![charjs demo](/demo/chartjs.png)
+![Doughnut chartjs](/demo/doughnut-chart.png)
 
 ## Learning
 

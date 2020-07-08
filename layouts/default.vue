@@ -147,6 +147,11 @@ export default {
           to: '/resources'
         },
         {
+          icon: 'mdi-chart-bar',
+          title: 'Project Stats',
+          to: '/stats'
+        },
+        {
           icon: 'mdi-format-list-bulleted-square',
           title: 'Test',
           to: '/test'
