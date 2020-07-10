@@ -140,15 +140,18 @@ https://docs.google.com/spreadsheets/d/1Yc2esnockqfrNweacmegXnavuPly8PvjaRzqlRza
 
 ---
 
+## :earth_asia: Live Link
+
+[Click here to live link][url]
+
 ## :paperclip: Other Information
 
 * [Got a bug, kindly report it here](https://github.com/avimehenwal/vue-gsheets/issues)
 * [Let me know if you got a feature request, or support for other framework](https://github.com/avimehenwal/vue-gsheets/issues)
 * Contact me for contributions via [twitter](https://twitter.com/avimehenwal)
-* [Test Repo](https://github.com/avimehenwal/vue-sheets)
 * [NPM Package](https://www.npmjs.com/package/vue-gsheets)
 
-
+[url]: https://vue-sheets.netlify.app/
 
 <a href="https://www.buymeacoffee.com/F1j07cV" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
