@@ -6,11 +6,16 @@
   "repository": "git@github.com:avimehenwal/vue-gsheets.git",
   "author": "avimehenwal <avi.mehanwal@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "commit": "git cz"
+  },
   "dependencies": {
     "commitizen": "^4.1.2"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "3.2.0"
+    "cz-conventional-changelog": "3.2.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-vue": "^6.2.2"
   },
   "config": {
     "commitizen": {

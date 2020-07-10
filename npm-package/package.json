@@ -6,16 +6,19 @@
   "author": "avimehenwal",
   "license": "ISC",
   "homepage": "https://github.com/avimehenwal/vue-gsheets#readme",
-  "bugs": {
-    "url": "https://github.com/avimehenwal/vue-gsheets/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/avimehenwal/vue-gsheets.git"
   },
+  "bugs": {
+    "url": "https://github.com/avimehenwal/vue-gsheets/issues"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "axios": "^0.19.2"
   },
