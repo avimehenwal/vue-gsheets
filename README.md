@@ -2,7 +2,7 @@
 [![Downloads Stats][npm-downloads]][npm-url]
 [![npm trends][trends-badge]][npm-trends]
 
-- [:open_file_folder: vue-gsheets](#open_file_folder-vue-gsheets)
+- [:open_file_folder: vue-gsheets ![Netlify Status](https://app.netlify.com/sites/vue-sheets/deploys)](#open_file_folder-vue-gsheets-img-srchttpsapinetlifycomapiv1badges51bc5350-2b2c-4e7e-ba7f-73a3812ebbc4deploy-status-altnetlify-status)
   - [:wrench: Installation](#wrench-installation)
   - [:mailbox: Input Arguments](#mailbox-input-arguments)
   - [:sparkles: How to use in components](#sparkles-how-to-use-in-components)
@@ -16,7 +16,7 @@
 [npm-image]: https://img.shields.io/npm/v/vue-gsheets.svg?style=flat-square
 [npm-downloads]: https://img.shields.io/npm/dm/vue-gsheets.svg?style=flat-square
 
-# :open_file_folder: vue-gsheets
+# :open_file_folder: vue-gsheets  [![Netlify Status](https://api.netlify.com/api/v1/badges/51bc5350-2b2c-4e7e-ba7f-73a3812ebbc4/deploy-status)](https://app.netlify.com/sites/vue-sheets/deploys)
 
 Parses a public Google sheets spreadsheet if it follows a basic format of equally structured rows that start with a heading row.
 

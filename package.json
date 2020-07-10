@@ -19,8 +19,15 @@
     "eslint-plugin-vue": "^6.2.2"
   },
   "config": {
+    "cz-emoji": {
+      "scopes": [
+        "npm",
+        "vue",
+        "netlify"
+      ]
+    },
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-emoji"
     }
   }
 }
