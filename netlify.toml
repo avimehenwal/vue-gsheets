@@ -2,3 +2,11 @@
   base = "vue-test-app"
   command = "yarn run build"
   publish = "dist"
+
+[context.branch-deploy]
+  command = "yarn run build"
+
+[context.branch-deploy.environment]
+  NODE_VERSION = "10.19.0"
+
+[context.deploy-preview]
