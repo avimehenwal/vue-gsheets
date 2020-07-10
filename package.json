@@ -1,18 +1,31 @@
 {
   "name": "vue-gsheets",
-  "version": "3.0.0",
-  "description": "Transform data provided by public google sheet api to be used easily within vue components",
-  "main": "npm-package/index.js",
-  "repository": "git@github.com:avimehenwal/vue-gsheets.git",
-  "author": "avimehenwal <avi.mehanwal@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "commit": "git cz"
+  "version": "3.0.2",
+  "description": "Transform data from published google sheets to usable vue items format",
+  "main": "index.js",
+  "author": "avimehenwal",
+  "license": "ISC",
+  "homepage": "https://github.com/avimehenwal/vue-gsheets#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avimehenwal/vue-gsheets.git"
   },
+  "bugs": {
+    "url": "https://github.com/avimehenwal/vue-gsheets/issues"
+  },
+  "scripts": {
+    "commit": "git cz",
+    "changelog": "standard-version --dry-run",
+    "publish": "npm publish --access public"
+  },
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
-    "commitizen": "^4.1.2"
+    "axios": "^0.19.2"
   },
   "devDependencies": {
+    "commitizen": "^4.1.2",
     "cz-conventional-changelog": "3.2.0",
     "cz-emoji": "^1.2.1",
     "eslint": "^7.4.0",
@@ -29,5 +42,14 @@
     "commitizen": {
       "path": "cz-emoji"
     }
-  }
+  },
+  "keywords": [
+    "vuejs",
+    "vue",
+    "google-sheets",
+    "sheets",
+    "gsheet",
+    "spreadsheet",
+    "parser"
+  ]
 }

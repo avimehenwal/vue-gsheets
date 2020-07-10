@@ -7893,7 +7893,7 @@ vue-eslint-parser@^7.0.0:
     esquery "^1.0.1"
     lodash "^4.17.15"
 
-"vue-gsheets@link:../npm-package":
+"vue-gsheets@link:../":
   version "0.0.0"
   uid ""
 
