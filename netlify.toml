@@ -1,0 +1,4 @@
+[build]
+  base = "vue-test-app"
+  command = "yarn run build"
+  publish = "dist"

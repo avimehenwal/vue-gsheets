@@ -36,6 +36,7 @@ export const vueGsheets = {
     },
     methods: {
       async fetchData () {
+        // eslint-disable-next-line no-unused-vars
         const data = await axios.get(this.getURL)
         .then(response => {
           const entry = response.data.feed.entry
