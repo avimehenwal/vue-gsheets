@@ -1,0 +1,20 @@
+{
+  "name": "vue-gsheets",
+  "version": "3.0.0",
+  "description": "Transform data provided by public google sheet api to be used easily within vue components",
+  "main": "npm-package/index.js",
+  "repository": "git@github.com:avimehenwal/vue-gsheets.git",
+  "author": "avimehenwal <avi.mehanwal@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commitizen": "^4.1.2"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
