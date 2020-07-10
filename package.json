@@ -3,12 +3,21 @@
   "version": "2.0.2",
   "description": "Transform data from published google sheets to usable vue items format",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "avimehenwal",
+  "license": "ISC",
+  "homepage": "https://github.com/avimehenwal/vue-gsheets#readme",
+  "bugs": {
+    "url": "https://github.com/avimehenwal/vue-gsheets/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/avimehenwal/vue-gsheets.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
   },
   "keywords": [
     "vuejs",
@@ -18,14 +27,5 @@
     "gsheet",
     "spreadsheet",
     "parser"
-  ],
-  "author": "avimehenwal",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/avimehenwal/vue-gsheets/issues"
-  },
-  "homepage": "https://github.com/avimehenwal/vue-gsheets#readme",
-  "dependencies": {
-    "axios": "^0.19.2"
-  }
+  ]
 }

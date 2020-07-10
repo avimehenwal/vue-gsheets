@@ -1,0 +1,9 @@
+digraph G {
+  splines="FALSE"
+  n1 [
+    label="npm-trends"
+    shape=plaintext
+    ranksep=1
+    fontsize=10
+  ]
+}
