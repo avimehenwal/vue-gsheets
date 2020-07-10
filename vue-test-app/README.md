@@ -4,4 +4,5 @@
 
 ```
 yarn add link:../npm-package
+yarn add link:../
 ```
