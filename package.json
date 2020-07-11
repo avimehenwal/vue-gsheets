@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "babel --verbose --out-dir dist index.js; cp -v package.json -t dist; tree dist; du index.js; du dist/index.js",
-    "publish": "yarn run build; semantic-release; yarn publish dist --access public",
+    "pub": "yarn run build; semantic-release; yarn publish dist --access public",
     "dist": "npm pack --dry-run; yarn --verbose pack",
     "changelog": "standard-version --dry-run",
     "rm": "rm -rfv dist/; find . -maxdepth 1 -name '*.tgz' -print -delete; find . -maxdepth 1 -type d -name 'package' -print -exec rm -rv {} +",
