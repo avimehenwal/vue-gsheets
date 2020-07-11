@@ -7897,9 +7897,14 @@ vue-eslint-parser@^7.0.0:
     esquery "^1.0.1"
     lodash "^4.17.15"
 
-"vue-gsheets@link:../dist":
+"vue-gsheets@link:..":
   version "0.0.0"
   uid ""
+
+"vue-gsheets@link:../":
+  version "3.0.2"
+  dependencies:
+    axios "^0.19.2"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"

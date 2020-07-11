@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "cp -v package.json -t dist; yarn add link:../dist; vue-cli-service serve; rm -rfv dist/package.json",
-    "build": "cp -v package.json -t dist; yarn add link:../dist; vue-cli-service build; rm -rfv dist/package.json",
+    "serve": "yarn add link:../; vue-cli-service serve",
+    "build": "yarn add link:../; vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -12,7 +12,7 @@
     "core-js": "^3.6.4",
     "dist": "link:../dist",
     "vue": "^2.6.11",
-    "vue-gsheets": "link:../dist"
+    "vue-gsheets": "link:../"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",

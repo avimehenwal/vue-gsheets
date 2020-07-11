@@ -2,9 +2,9 @@
   "name": "vue-gsheets",
   "version": "3.0.2",
   "description": "Transform data from published google sheets to usable vue items format",
-  "main": "dist/index.js",
+  "main": "index.js",
   "author": "avimehenwal",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/avimehenwal/vue-gsheets#readme",
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
   },
   "scripts": {
     "build": "babel --verbose --out-dir dist index.js; tree dist; du index.js; du dist/index.js",
-    "pub": "yarn run rm; yarn run build; semantic-release; npm pack --dry-run; npm publish dist --access public",
+    "publ": "yarn run rm; yarn run build; semantic-release; npm publish --dry-run; yarn publish dist --access public",
+    "pub": "semantic-release; npm publish --dry-run; yarn publish --access public",
     "dist": "npm pack --dry-run; yarn --verbose pack",
     "changelog": "standard-version --dry-run",
     "rm": "rm -rfv dist/; find . -maxdepth 1 -name '*.tgz' -print -delete; find . -maxdepth 1 -type d -name 'package' -print -exec rm -rv {} +",
@@ -23,7 +24,7 @@
     "commit": "git cz"
   },
   "files": [
-    "dist/index.js"
+    "index.js"
   ],
   "dependencies": {
     "axios": "^0.19.2"
