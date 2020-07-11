@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "yarn add link:../dist; vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "cp -v package.json -t dist; yarn add link:../dist; vue-cli-service serve; rm -rfv dist/package.json",
+    "build": "cp -v package.json -t dist; yarn add link:../dist; vue-cli-service build; rm -rfv dist/package.json",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "dist": "link:../dist",
     "vue": "^2.6.11",
     "vue-gsheets": "link:../dist"
   },

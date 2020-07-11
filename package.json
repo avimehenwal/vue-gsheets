@@ -14,8 +14,8 @@
     "url": "https://github.com/avimehenwal/vue-gsheets/issues"
   },
   "scripts": {
-    "build": "babel --verbose --out-dir dist index.js; cp -v package.json -t dist; tree dist; du index.js; du dist/index.js",
-    "pub": "yarn run build; semantic-release; yarn publish dist --access public",
+    "build": "babel --verbose --out-dir dist index.js; tree dist; du index.js; du dist/index.js",
+    "pub": "yarn run rm; yarn run build; semantic-release; npm pack --dry-run; npm publish dist --access public",
     "dist": "npm pack --dry-run; yarn --verbose pack",
     "changelog": "standard-version --dry-run",
     "rm": "rm -rfv dist/; find . -maxdepth 1 -name '*.tgz' -print -delete; find . -maxdepth 1 -type d -name 'package' -print -exec rm -rv {} +",
