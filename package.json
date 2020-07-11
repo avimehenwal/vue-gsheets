@@ -18,7 +18,7 @@
     "publish": "yarn run build; yarn publish dist --access public",
     "dist": "npm pack --dry-run; yarn --verbose pack",
     "changelog": "standard-version --dry-run",
-    "rm": "rm -rfv dist/",
+    "rm": "rm -rfv dist/; find . -maxdepth 1 -name '*.tgz' -print -delete; find . -maxdepth 1 -type d -name 'package' -print -exec rm -rv {} +",
     "release": "semantic-release -b develop --dry-run",
     "sr": "semantic-release --dry-run",
     "commit": "git cz"
