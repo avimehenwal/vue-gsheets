@@ -2,3 +2,8 @@
 node_modules/
 yarn.lock
 yarn-error.log
+
+# Distribution
+dist/*
+vue-gsheets*.tgz
+package/*

@@ -1,6 +1,8 @@
 [![NPM Version][npm-image]][npm-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 [![npm trends][trends-badge]][npm-trends]
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
 
 - [:open_file_folder: vue-gsheets ![Netlify Status](https://app.netlify.com/sites/vue-sheets/deploys)](#open_file_folder-vue-gsheets-img-srchttpsapinetlifycomapiv1badges51bc5350-2b2c-4e7e-ba7f-73a3812ebbc4deploy-status-altnetlify-status)
   - [:wrench: Installation](#wrench-installation)
@@ -55,11 +57,13 @@ will be parsed into the following JSON
 
 ```sh
 yarn add vue-gsheets
-
-or
-
+# or
 npm install --save vue-gsheets
 ```
+
+## :earth_asia: Live Link
+
+[Click here to live link][url]
 
 
 ## :mailbox: Input Arguments
@@ -138,11 +142,16 @@ https://docs.google.com/spreadsheets/d/1Yc2esnockqfrNweacmegXnavuPly8PvjaRzqlRza
 
 **sheetPageNumber** = `1` unless there are multiple pages on spreadsheet
 
+
+## :date: Changelog
+
+See the GitHub [release history.](https://github.com/avimehenwal/vue-gsheets/releases)
+
+## License
+
+MIT
+
 ---
-
-## :earth_asia: Live Link
-
-[Click here to live link][url]
 
 ## :paperclip: Other Information
 
