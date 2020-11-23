@@ -96,7 +96,7 @@ import { vueGsheets } from 'vue-gsheets'
 
 export default {
   mixins: [vueGsheets],
-  date: () => ({
+  data: () => ({
     COLUMNS: 3,
     sheetPageNumber: 1,
     SHEETID: '1Yc2esnockqfrNweacmegXnavuPly8PvjaRzqlRzaXTE'
